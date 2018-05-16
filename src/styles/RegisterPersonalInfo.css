@@ -1,0 +1,47 @@
+.registration-form-buttonwrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px;
+}
+
+.registration-form-buttonwrapper > .button {
+  cursor: pointer !important;
+}
+
+.registration-form-fieldwrapper {
+  display: flex;
+  align-items: center;
+}
+
+.registration-form-fieldwrapper > * {
+  flex: 1;
+  margin: 0 10px 0 10px;
+}
+
+.registration-form-fieldwrapper > .checkbox {
+  margin-top: 15px;
+}
+
+.registration-form-wrapper {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .registration-form-wrapper {
+    min-width: 320px;
+  }
+
+  .registration-form-fieldwrapper {
+    padding: 0;
+    display: block;
+  }
+
+  .registration-form-fieldwrapper > * {
+    display: block;
+    padding: 0;
+    margin: 0;
+    /* could not figure out what was overriding this width */
+    width: 100% !important;
+  }
+}

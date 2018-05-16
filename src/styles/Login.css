@@ -1,0 +1,26 @@
+.wrapper {
+    width: 40vw;
+    margin: 10vh auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.login-button {
+    font-size: 24px;
+    margin-top: 30px;
+    padding: 20px 15px 15px 15px;
+    min-width: 25vw;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .login-button {
+    min-width: 50vw;
+  }
+}

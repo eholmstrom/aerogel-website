@@ -1,0 +1,12 @@
+.register-wrapper {
+  width: 60%;
+  margin: 90px auto;
+}
+
+@media (max-width: 768px) {
+  .register-wrapper {
+    width: 95%;
+    margin: 40px auto;
+    padding-left: 5%;
+  }
+}

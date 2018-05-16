@@ -1,0 +1,4 @@
+.checkbox {
+  flex: 1;
+  display: block !important; /* display: block; will expand to parent width */
+}

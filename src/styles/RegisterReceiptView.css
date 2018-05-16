@@ -1,0 +1,10 @@
+.RegisterReceiptView-text-icon {
+  font-size: 58px;
+  color: #8a4797;
+}
+
+@media (max-width: 768px) {
+  .RegisterReceiptView-text-icon {
+    font-size: 32px;
+  }
+}

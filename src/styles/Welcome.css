@@ -1,0 +1,16 @@
+.Welcome {
+  min-height: calc(100% - 80px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/surf-background.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-login-text {
+  font-size: 60px;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  padding: 20px;
+}
