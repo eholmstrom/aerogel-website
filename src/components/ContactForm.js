@@ -18,6 +18,7 @@ class BookForm extends Component {
       personName: '',
       personEmail: '',
       phoneNumber: '',
+      message: '',
     }
   }
 
@@ -57,10 +58,10 @@ class BookForm extends Component {
             <TextField
               fullWidth
               floatingLabelText="Message"
-              value={this.state.specialReq}
+              value={this.state.message}
               multiLine
               rows={5}
-              onChange={(evt, val) => this.setChange('specialReq', val)}
+              onChange={(evt, val) => this.setChange('message', val)}
             />
           </div>
           <Button title="Send" type="tertiary" onClick={this.onConfirm} />
