@@ -1,6 +1,7 @@
 .Welcome {
   min-height: calc(100% - 80px);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/surf-background.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url('../assets/surf-background.jpg');
   background-position: center;
   background-size: cover;
   display: flex;
@@ -8,9 +9,26 @@
   align-items: center;
 }
 
+.homeWrapper {
+  width: 65%;
+}
+
 .welcome-login-text {
   font-size: 60px;
   font-family: 'Lato', sans-serif;
   color: white;
   padding: 20px;
+}
+
+.home-text {
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: white;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
 }

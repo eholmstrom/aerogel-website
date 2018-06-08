@@ -3,12 +3,12 @@
   width: 100%;
   /* min-width: 400px; */
   align-items: center;
-  background-color: #2980b9;
+  background-color: #009790; /*#2980b9 #ff805c */
 }
 
 .Header-menu {
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
   height: 100%;
 }
@@ -28,7 +28,7 @@
 
 .Header-button-menu-active {
   color: white !important;
-  border-bottom: 5px solid #e67e22 !important;
+  border-bottom: 5px solid #ff805c !important; /* #e67e22 */
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }

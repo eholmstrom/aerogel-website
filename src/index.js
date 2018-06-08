@@ -9,13 +9,12 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import App from './containers/App'
 import './styles/index.css'
 import store from './store'
-// import registerServiceWorker from './registerServiceWorker'
 
 const muiTheme = getMuiTheme({
   fontFamily: 'Lato, sans-serif',
   palette: {
     textColor: '#333',
-    primary1Color: '#e67e22',
+    primary1Color: '#ff805c',
     primary2Color: '#FFBBCC',
   },
   appBar: {

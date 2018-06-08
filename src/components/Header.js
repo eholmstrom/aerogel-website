@@ -38,10 +38,26 @@ class Header extends Component {
 
   renderDesktopMenu = () => (
     <div className="Header-menu">
+      <div style={{ margin: '0 18% 0 20px' }}>
+        <a href="/">
+          <img
+            src={require('../assets/logo2.png')}
+            alt="logo"
+            width="192"
+            height="50"
+            style={{ float: 'left' }}
+          />
+        </a>
+      </div>
       <MenuLinkItem title="Home" path={paths.home} activePath={this.props.location.pathname} />
       <MenuLinkItem
         path={paths.aboutRegistration}
         title="About the Work Process"
+        activePath={this.props.location.pathname}
+      />
+      <MenuLinkItem
+        path={paths.aboutUs}
+        title="About Us"
         activePath={this.props.location.pathname}
       />
     </div>

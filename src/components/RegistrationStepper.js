@@ -9,12 +9,8 @@ const step1 = {
   title: <h2 style={{ color: titleColor }}>CREATING A PROTOTYPE</h2>,
   content: (
     <p>
-      The first step in the registration process either here on karnevalist.se or in the mobile
-      application (Karnevalist 2018). When you have created your profile on the cyberweb you are
-      ready for "Uppropet" the 4th of Feburary in AF-borgen. <br />
-      <br />
-      <b>NOTICE</b>: You need to be a member in the Academic Society (AF), union and nation
-      (Studentlund), or being a supporting member of the Academic Society.
+      The first step in the work process is to create a prototype. <br />
+      <br /> With the prototype finished we can commence the thermal conductivity measurements.
     </p>
   ),
 }
@@ -23,15 +19,8 @@ const step2 = {
   title: <h2 style={{ color: titleColor }}>TESTING THE INSULATION PROPERTIES</h2>,
   content: (
     <p>
-      You check in on the call day, "Uppropet", using your personal number. The staff on location
-      will help you with everything!<br />
-      <br />
-      After the check in you will be able to choose what section of the 33 available you want to
-      join, this will be done in the mobile app! When you are happy with your choices you may submit
-      them, and you will now be registered!<br />
-      <br />
-      After the check in you will be able to buy a ticket for the huge and awesome "Karnevelj", a
-      party with 3000 people attending!
+      The thermal conductivity measurements will give us quantitive information about the products
+      performance compared to current wetsuits.
     </p>
   ),
 }
@@ -40,8 +29,7 @@ const step3 = {
   title: <h2 style={{ color: titleColor }}>LAUNCHING OUR WETSUIT</h2>,
   content: (
     <p>
-      Two weeks after "Uppropet" you get the information about what section you will belong to!
-      It&apos;s now when you got your section that you are finally an awesome "Karnevalist"!
+      When the optimal structure has been determined together with functioning material performance we can begin the launch of the wetsuit.
     </p>
   ),
 }
@@ -159,7 +147,7 @@ class RegistrationStepper extends React.Component {
       >
         <MediaQuery minDeviceWidth={769}>
           <h1 style={{ textAlign: 'center', marginBottom: 80, marginTop: 60 }}>
-            ABOUT THE WORK PROCESS
+            WORK PROCESS
           </h1>
         </MediaQuery>
         <ResponsiveStepper linear={false} activeStep={stepIndex}>
@@ -170,7 +158,9 @@ class RegistrationStepper extends React.Component {
             <ResponsiveStepContent>{this.getStepContent(0)}</ResponsiveStepContent>
           </Step>
           <Step>
-            <StepButton onClick={() => this.setState({ stepIndex: 1 })}>Testing the insulation properties</StepButton>
+            <StepButton onClick={() => this.setState({ stepIndex: 1 })}>
+              Testing the insulation properties
+            </StepButton>
             <ResponsiveStepContent>{this.getStepContent(1)}</ResponsiveStepContent>
           </Step>
           <Step>

@@ -29,7 +29,7 @@ const buttonStyleDisable = {
 const buttonStyleRounded = {
   ...buttonStylePink,
   fontWeight: 'none',
-  background: '#e67e22',
+  background: '#ff805c',
 }
 
 const smallSize = {
@@ -50,9 +50,18 @@ const largeSize = {
   padding: '20px 15px 15px 15px',
 }
 
-const Button = ({ // eslint-disable-next-line
-  onClick, title, type, style, small, medium,
-  large, rounded, className, buttonType
+const Button = ({
+  // eslint-disable-next-line
+  onClick,
+  title,
+  type,
+  style,
+  small,
+  medium,
+  large,
+  rounded,
+  className,
+  buttonType,
 }) => {
   let buttonStyle = buttonStylePink
   if (type === 'secondary') {
@@ -75,10 +84,9 @@ const Button = ({ // eslint-disable-next-line
     buttonStyle = { ...buttonStyle, borderRadius: 60 }
   }
 
-
   return (
     <button
-      className={`button${' ' + className}`}
+      className={`button${` ${className}`}`}
       onClick={type === 'disabled' ? () => {} : onClick}
       style={{ ...buttonStyle, ...style }}
       type={buttonType}

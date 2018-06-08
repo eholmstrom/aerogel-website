@@ -8,6 +8,7 @@ import Header from '../components/Header'
 import Welcome from '../components/Welcome'
 import AboutRegistration from './AboutRegistration'
 import ContactUs from './ContactUs'
+import AboutUsContainer from './AboutUsContainer'
 
 import '../styles/App.css'
 
@@ -15,6 +16,7 @@ export const paths = {
   home: '/',
   login: '/login',
   aboutRegistration: '/aboutregistration',
+  aboutUs: '/aboutus',
 }
 
 class App extends Component {
@@ -46,6 +48,7 @@ class App extends Component {
               />
               <Route exact path="/aboutregistration" component={AboutRegistration} />
               <Route exact path="/contactus" component={ContactUs} />
+              <Route exact path="/aboutus" component={AboutUsContainer} />
             </Switch>
           </div>
         </BrowserRouter>

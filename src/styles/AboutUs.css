@@ -1,0 +1,14 @@
+.aboutUsWrapper {
+  max-width: 700px;
+  margin: 50px auto;
+}
+
+.projectSummary {
+  text-align: left;
+  font-size: 15px;
+  margin: 30px auto;
+}
+
+.team {
+  width: 100%;
+}
