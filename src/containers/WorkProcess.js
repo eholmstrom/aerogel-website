@@ -1,6 +1,6 @@
 import React from 'react'
 import RegistrationStepper from '../components/RegistrationStepper'
 
-const AboutRegistration = () => <RegistrationStepper />
+const WorkProcess = () => <RegistrationStepper />
 
-export default AboutRegistration
+export default WorkProcess

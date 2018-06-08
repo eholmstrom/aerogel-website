@@ -6,7 +6,8 @@
 .projectSummary {
   text-align: left;
   font-size: 15px;
-  margin: 30px auto;
+  margin: 15px auto;
+  padding: 10px;
 }
 
 .team {

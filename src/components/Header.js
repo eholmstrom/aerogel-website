@@ -41,7 +41,7 @@ class Header extends Component {
       <div style={{ margin: '0 18% 0 20px' }}>
         <a href="/">
           <img
-            src={require('../assets/logo2.png')}
+            src={require('../assets/logo2_1.png')}
             alt="logo"
             width="192"
             height="50"
@@ -51,8 +51,8 @@ class Header extends Component {
       </div>
       <MenuLinkItem title="Home" path={paths.home} activePath={this.props.location.pathname} />
       <MenuLinkItem
-        path={paths.aboutRegistration}
-        title="About the Work Process"
+        path={paths.workProcess}
+        title="Work Process"
         activePath={this.props.location.pathname}
       />
       <MenuLinkItem

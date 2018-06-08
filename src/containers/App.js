@@ -6,7 +6,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import Header from '../components/Header'
 import Welcome from '../components/Welcome'
-import AboutRegistration from './AboutRegistration'
+import WorkProcess from './WorkProcess'
 import ContactUs from './ContactUs'
 import AboutUsContainer from './AboutUsContainer'
 
@@ -15,7 +15,7 @@ import '../styles/App.css'
 export const paths = {
   home: '/',
   login: '/login',
-  aboutRegistration: '/aboutregistration',
+  workProcess: '/workProcess',
   aboutUs: '/aboutus',
 }
 
@@ -46,7 +46,7 @@ class App extends Component {
                   />
                 )}
               />
-              <Route exact path="/aboutregistration" component={AboutRegistration} />
+              <Route exact path="/workprocess" component={WorkProcess} />
               <Route exact path="/contactus" component={ContactUs} />
               <Route exact path="/aboutus" component={AboutUsContainer} />
             </Switch>

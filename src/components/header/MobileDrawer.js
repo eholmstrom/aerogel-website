@@ -8,7 +8,7 @@ import { paths } from '../../containers/App'
 
 const styles = {
   drawer: {
-    backgroundColor: '#8a4797',
+    backgroundColor: '#009790',
     padding: 0,
   },
 
@@ -21,7 +21,7 @@ const styles = {
   },
 
   mobileMenuItemActive: {
-    backgroundColor: '#f4376d',
+    backgroundColor: '#ff805c',
   },
 
   menuButton: {
@@ -61,27 +61,17 @@ const MobileDrawer = props => (
       onClick={props.handleDrawerToggle}
     />
     <MobileMenuItem
-      title="About Registration"
-      path={paths.aboutRegistration}
+      title="Work Process"
+      path={paths.workProcess}
       activePath={props.location.pathname}
       onClick={props.handleDrawerToggle}
     />
-    {props.loggedIn && (
-      <MobileMenuItem
-        path={paths.settings}
-        title="Settings"
-        activePath={props.location.pathname}
-        onClick={props.handleDrawerToggle}
-      />
-    )}
-    {props.admin && (
-      <MobileMenuItem
-        path={paths.userList}
-        title="User List"
-        activePath={props.location.pathname}
-        onClick={props.handleDrawerToggle}
-      />
-    )}
+    <MobileMenuItem
+      title="About Us"
+      path={paths.aboutUs}
+      activePath={props.location.pathname}
+      onClick={props.handleDrawerToggle}
+    />
   </Drawer>
 )
 

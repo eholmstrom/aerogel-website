@@ -18,7 +18,7 @@ const style = {
 const renderLoggedOut = () => (
   <div className="homeWrapper">
     <div className="home-text">
-      <h1>Aquano</h1>
+      <img src={require('../assets/logo2_1.png')} alt="logo" width="307" height="80" />
       <p>Developing wetsuits without restrictions.</p>
     </div>
     <div className="buttonWrapper">
