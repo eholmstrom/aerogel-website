@@ -16,11 +16,12 @@ const step1 = {
 }
 
 const step2 = {
-  title: <h2 style={{ color: titleColor }}>TESTING THE INSULATION PROPERTIES</h2>,
+  title: <h2 style={{ color: titleColor }}>MEASUREMENTS</h2>,
   content: (
     <p>
-      The thermal conductivity measurements will give us quantitive information about the products
-      performance compared to current wetsuits.
+      Secondly, measurements must be performed to obtain information about elasticity, durability as
+      well as the insulation properties. The thermal conductivity measurements will give us
+      quantitive information about the products performance compared to current wetsuits.
     </p>
   ),
 }
@@ -29,7 +30,8 @@ const step3 = {
   title: <h2 style={{ color: titleColor }}>LAUNCHING OUR WETSUIT</h2>,
   content: (
     <p>
-      When the optimal structure has been determined together with functioning material performance we can begin the launch of the wetsuit.
+      When the optimal structure has been determined together with functioning material performance
+      we can begin the launch of the wetsuit.
     </p>
   ),
 }
@@ -67,7 +69,7 @@ const ResponsiveStepContent = ({ children, ...rest }) => (
   </MediaQuery>
 )
 
-class RegistrationStepper extends React.Component {
+class ProcessStepper extends React.Component {
   static disabledPrimaryButtonCheck (stepIndex) {
     if (stepIndex === 2) {
       return 'disabled'
@@ -126,14 +128,14 @@ class RegistrationStepper extends React.Component {
       <Button
         key="btn-1"
         title="Back"
-        type={RegistrationStepper.disabledSecondaryButtonCheck(stepIndex)}
+        type={ProcessStepper.disabledSecondaryButtonCheck(stepIndex)}
         onClick={this.handlePrev}
         style={{ marginRight: 12 }}
       />,
       <Button
         key="btn-2"
         title="Continue"
-        type={RegistrationStepper.disabledPrimaryButtonCheck(stepIndex)}
+        type={ProcessStepper.disabledPrimaryButtonCheck(stepIndex)}
         onClick={this.handleNext}
       />,
     ]
@@ -146,9 +148,7 @@ class RegistrationStepper extends React.Component {
         }}
       >
         <MediaQuery minDeviceWidth={769}>
-          <h1 style={{ textAlign: 'center', marginBottom: 80, marginTop: 60 }}>
-            WORK PROCESS
-          </h1>
+          <h1 style={{ textAlign: 'center', marginBottom: 80, marginTop: 60 }}>WORK PROCESS</h1>
         </MediaQuery>
         <ResponsiveStepper linear={false} activeStep={stepIndex}>
           <Step>
@@ -158,9 +158,7 @@ class RegistrationStepper extends React.Component {
             <ResponsiveStepContent>{this.getStepContent(0)}</ResponsiveStepContent>
           </Step>
           <Step>
-            <StepButton onClick={() => this.setState({ stepIndex: 1 })}>
-              Testing the insulation properties
-            </StepButton>
+            <StepButton onClick={() => this.setState({ stepIndex: 1 })}>Measurements</StepButton>
             <ResponsiveStepContent>{this.getStepContent(1)}</ResponsiveStepContent>
           </Step>
           <Step>
@@ -188,4 +186,4 @@ class RegistrationStepper extends React.Component {
   }
 }
 
-export default RegistrationStepper
+export default ProcessStepper

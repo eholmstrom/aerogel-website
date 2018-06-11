@@ -32,3 +32,4 @@ const Wrapper = () => (
 
 ReactDOM.render(<Wrapper />, document.getElementById('root'))
 // registerServiceWorker()
+// "eslint-plugin-jsx-a11y": "^6.0.2"

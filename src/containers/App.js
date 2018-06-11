@@ -15,7 +15,7 @@ import '../styles/App.css'
 export const paths = {
   home: '/',
   login: '/login',
-  workProcess: '/workProcess',
+  workProcess: '/workprocess',
   aboutUs: '/aboutus',
 }
 
