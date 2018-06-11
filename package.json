@@ -21,8 +21,7 @@
   },
   "devDependencies": {
     "@storybook/react": "^3.2.14",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2"
+    "eslint-config-airbnb": "^16.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,6 +31,5 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
-  },
-  "proxy": "http://localhost:3000"
+  }
 }
