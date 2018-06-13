@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
+import Responsive from 'react-responsive-decorator'
+import MediaQuery from 'react-responsive'
 
 import '../styles/Welcome.css'
 
 const style = {
   buttonStyle: {
-    fontSize: 24,
+    fontSize: 22,
     margin: 20,
     padding: '30px 25px 25px 25px',
     minWidth: '20vw',
@@ -29,7 +31,7 @@ const renderLoggedOut = () => (
   </div>
 )
 
-const renderTripleBoxes = () => (
+const renderFeatures = () => (
   <div className="boxWrapper">
     <div className="oneBox">
       <img src={require('../assets/surfer-bw.jpg')} alt="surfer-bw" width="300" height="300" />
@@ -49,9 +51,49 @@ const renderTripleBoxes = () => (
       />
       <h2>Sustainability</h2>
       <div className="divider" />
-      <p>Wetsuits made from renewable materials.</p>
+      <p>
+        Wetsuits made from renewable materials. The rubber is harvested from natural rubber trees
+        called <i>Hevea brasiliensis</i> resulting in isoprene.
+      </p>
     </div>
     <div className="oneBox">
+      <img src={require('../assets/porosity.jpg')} alt="porosity" width="300" height="300" />
+      <h2>Nanotechnology</h2>
+      <div className="divider" />
+      <p>
+        Introducing nanotechnology to watersports. This new kind of wetsuit keeps you warm while
+        improving the flexibility of the suit.
+      </p>
+    </div>
+  </div>
+)
+
+const renderFeaturesMobile = () => (
+  <div>
+    <div className="oneBoxMobile">
+      <img src={require('../assets/surfer-bw.jpg')} alt="surfer-bw" width="300" height="300" />
+      <h2>Performance</h2>
+      <div className="divider" />
+      <p>
+        We've deleveloped a way for increasing the flexibility allowing for easier movement for the
+        wearer while improving the insulation properties keeping you warm during long sessions.{' '}
+      </p>
+    </div>
+    <div className="oneBoxMobile">
+      <img
+        src={require('../assets/rubber-tree_small.jpg')}
+        alt="rubber-tree"
+        width="300"
+        height="300"
+      />
+      <h2>Sustainability</h2>
+      <div className="divider" />
+      <p>
+        Wetsuits made from renewable materials. The rubber is harvested from natural rubber trees
+        called <i>Hevea brasiliensis</i> resulting in isoprene.
+      </p>
+    </div>
+    <div className="oneBoxMobile">
       <img src={require('../assets/porosity.jpg')} alt="porosity" width="300" height="300" />
       <h2>Nanotechnology</h2>
       <div className="divider" />
@@ -70,7 +112,12 @@ class Welcome extends Component {
     return (
       <div>
         <div className="Welcome">{renderLoggedOut()}</div>
-        <div className="tripleBoxesWrapper"> {renderTripleBoxes()}</div>
+        <MediaQuery minDeviceWidth={768}>
+          <div className="featuresWrapper"> {renderFeatures()}</div>
+        </MediaQuery>
+        <MediaQuery maxDeviceWidth={768}>
+          <div className="featuresWrapper"> {renderFeaturesMobile()}</div>
+        </MediaQuery>
       </div>
     )
   }

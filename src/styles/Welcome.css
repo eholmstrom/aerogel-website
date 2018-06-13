@@ -35,7 +35,7 @@
   margin-top: 90px;
 }
 
-.tripleBoxesWrapper {
+.featuresWrapper {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -49,6 +49,12 @@
 .oneBox {
   width: 300px;
   margin: 0 60px;
+  text-align: center;
+}
+
+.oneBoxMobile {
+  width: 300px;
+  margin: 0;
   text-align: center;
 }
 

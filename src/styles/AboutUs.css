@@ -13,3 +13,16 @@
 .team {
   width: 100%;
 }
+
+.contact-text {
+  margin-left: calc((100% - 250px) / 2);
+  width: 250px;
+  display: inline-flex;
+  justify-content: flex-start;
+}
+
+.contact-image {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
