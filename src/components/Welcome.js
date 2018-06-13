@@ -29,11 +29,50 @@ const renderLoggedOut = () => (
   </div>
 )
 
+const renderTripleBoxes = () => (
+  <div className="boxWrapper">
+    <div className="oneBox">
+      <img src={require('../assets/surfer-bw.jpg')} alt="surfer-bw" width="300" height="300" />
+      <h2>Performance</h2>
+      <div className="divider" />
+      <p>
+        We've deleveloped a way for increasing the flexibility allowing for easier movement for the
+        wearer while improving the insulation properties keeping you warm during long sessions.{' '}
+      </p>
+    </div>
+    <div className="oneBox">
+      <img
+        src={require('../assets/rubber-tree_small.jpg')}
+        alt="rubber-tree"
+        width="300"
+        height="300"
+      />
+      <h2>Sustainability</h2>
+      <div className="divider" />
+      <p>Wetsuits made from renewable materials.</p>
+    </div>
+    <div className="oneBox">
+      <img src={require('../assets/porosity.jpg')} alt="porosity" width="300" height="300" />
+      <h2>Nanotechnology</h2>
+      <div className="divider" />
+      <p>
+        Introducing nanotechnology to watersports. This new kind of wetsuit keeps you warm while
+        improving the flexibility of the suit.
+      </p>
+    </div>
+  </div>
+)
+
 class Welcome extends Component {
   componentWillMount () {}
 
   render () {
-    return <div className="Welcome">{renderLoggedOut()}</div>
+    return (
+      <div>
+        <div className="Welcome">{renderLoggedOut()}</div>
+        <div className="tripleBoxesWrapper"> {renderTripleBoxes()}</div>
+      </div>
+    )
   }
 }
 

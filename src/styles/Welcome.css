@@ -1,9 +1,10 @@
 .Welcome {
-  min-height: calc(100% - 80px);
+  min-height: calc(100vh - 80px);
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     url('../assets/surf-background.jpg');
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,4 +33,28 @@
   display: flex;
   justify-content: center;
   margin-top: 90px;
+}
+
+.tripleBoxesWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 80px auto;
+}
+
+.boxWrapper {
+  display: inline-flex;
+}
+
+.oneBox {
+  width: 300px;
+  margin: 0 60px;
+  text-align: center;
+}
+
+.divider {
+  border: solid 2px;
+  width: 70px;
+  margin: 25px auto;
+  border-color: #939598;
 }
