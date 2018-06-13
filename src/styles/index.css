@@ -18,12 +18,17 @@ a {
 h1,
 h2,
 h3 {
-  color: #939598;
+  color: #000000;
 }
 
 h1 {
   letter-spacing: 3px;
   text-transform: uppercase;
+  font-weight: 700;
+}
+
+h2,
+h3 {
   font-weight: 400;
 }
 

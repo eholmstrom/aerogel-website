@@ -51,112 +51,59 @@ const projectSummary = () => (
 
 const team = () => (
   <div className="team">
-    <h2>Team</h2>
-    <div style={{ width: '50%', display: 'inline-flex', alignSelf: 'center' }}>
-      <img
-        src={require('../assets/eric_profile.PNG')}
-        alt="Eric Profile"
-        width="250"
-        height="250"
-      />
-    </div>
-    <div style={{ display: 'inline-flex' }}>
-      <img
-        src={require('../assets/jakob_profile.PNG')}
-        alt="Jakob Profile"
-        width="250"
-        height="250"
-      />
-    </div>
-    <div style={{ width: '50%', display: 'inline-flex', alignSelf: 'center' }}>
-      <p>
-        {' '}
-        Eric Holmström <br /> <i className="material-icons">phone</i>{' '}
-        <a style={{ color: '#000000' }} href="tel:+46768654806">
-          {' '}
-          +46 768 65 48 06{' '}
-        </a>{' '}
-        <br />
-        <i className="material-icons">mail</i>
-        <a style={{ color: '#000000' }} href="mailto:eric_holmstrom@hotmail.com">
-          {' '}
-          eric_holmstrom@hotmail.com{' '}
-        </a>
-      </p>
-    </div>
-    <div style={{ display: 'inline-flex' }}>
-      <p>
-        {' '}
-        Jakob Mattsson <br /> <i className="material-icons">phone</i>{' '}
-        <a style={{ color: '#000000' }} href="tel:+46730456778">
-          {' '}
-          +46 730 45 67 78{' '}
-        </a>{' '}
-        <br />
-        <i className="material-icons">mail</i>
-        <a style={{ color: '#000000' }} href="mailto:jammattsson@mac.com">
-          {' '}
-          jammattsson@mac.com{' '}
-        </a>
-      </p>
-    </div>
-  </div>
-)
-
-const renderMobileTeam = () => (
-  <div className="team">
-    <h2>Team</h2>
-    <div>
-      <div className="contact-image">
-        <img
-          src={require('../assets/eric_profile.PNG')}
-          alt="Eric Profile"
-          width="250"
-          height="250"
-        />
-      </div>
-      <div className="contact-text">
-        <p>
+    <h2 style={{ marginLeft: '10px' }}>Team</h2>
+    <div className="contact-two-containers">
+      <div className="contact-container">
+        <div>
+          <img
+            src={require('../assets/eric_profile.PNG')}
+            alt="Eric Profile"
+            width="250"
+            height="250"
+          />
+        </div>
+        <div>
+          <p>
             {' '}
             Eric Holmström <br /> <i className="material-icons">phone</i>{' '}
             <a style={{ color: '#000000' }} href="tel:+46768654806">
-            {' '}
-            +46 768 65 48 06{' '}
+              {' '}
+              +46 768 65 48 06{' '}
             </a>{' '}
             <br />
             <i className="material-icons">mail</i>
             <a style={{ color: '#000000' }} href="mailto:eric_holmstrom@hotmail.com">
-            {' '}
-            eric_holmstrom@hotmail.com{' '}
+              {' '}
+              eric_holmstrom@hotmail.com{' '}
             </a>
-        </p>
+          </p>
+        </div>
       </div>
-    </div>
-    <div className="">
-      <div className="contact-image">
-        <img
-         src={require('../assets/jakob_profile.PNG')}
-         alt="Jakob Profile"
-         width="250"
-         height="250"
-        />
-      </div>
-
-      <div className="contact-text">
-        <p>
+      <div className="contact-container">
+        <div>
+          <img
+            src={require('../assets/jakob_profile.PNG')}
+            alt="Jakob Profile"
+            width="250"
+            height="250"
+          />
+        </div>
+        <div>
+          <p>
             {' '}
             Jakob Mattsson <br /> <i className="material-icons">phone</i>{' '}
             <a style={{ color: '#000000' }} href="tel:+46730456778">
-            {' '}
-            +46 730 45 67 78{' '}
+              {' '}
+              +46 730 45 67 78{' '}
             </a>{' '}
             <br />
             <i className="material-icons">mail</i>
             <a style={{ color: '#000000' }} href="mailto:jammattsson@mac.com">
-            {' '}
-            jammattsson@mac.com{' '}
+              {' '}
+              jammattsson@mac.com{' '}
             </a>
-        </p>
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -167,10 +114,11 @@ class AboutUs extends Component {
 
   render () {
     return (
-      <div className="aboutUsWrapper">
-        <div>{projectSummary()}</div>
-        <MediaQuery minDeviceWidth={768}>{team()} </MediaQuery>
-        <MediaQuery maxDeviceWidth={768}>{renderMobileTeam()}</MediaQuery>
+      <div className="main-div">
+        <div className="aboutUsWrapper">
+          <div>{projectSummary()}</div>
+          <div>{team()}</div>
+        </div>
       </div>
     )
   }
