@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Responsive from 'react-responsive-decorator'
 import MediaQuery from 'react-responsive'
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
 import Button from '../components/Button'
+import * as API from '../constants'
 
 import '../styles/AboutUs.css'
 
@@ -56,7 +58,7 @@ const team = () => (
       <div className="contact-container">
         <div>
           <img
-            src={require('../assets/eric_profile.PNG')}
+            src={require('../assets/eric_profile.jpg')}
             alt="Eric Profile"
             width="250"
             height="250"
@@ -82,7 +84,7 @@ const team = () => (
       <div className="contact-container">
         <div>
           <img
-            src={require('../assets/jakob_profile.PNG')}
+            src={require('../assets/jakob_profile.jpg')}
             alt="Jakob Profile"
             width="250"
             height="250"
@@ -109,6 +111,12 @@ const team = () => (
   </div>
 )
 
+const MyMapComponent = withScriptjs(withGoogleMap(props => (
+  <GoogleMap defaultZoom={15} defaultCenter={{ lat: 55.71188069, lng: 13.2152372 }}>
+    {props.isMarkerShown && <Marker position={{ lat: 55.71188069, lng: 13.2152372 }} />}
+  </GoogleMap>
+)))
+
 class AboutUs extends Component {
   componentWillMount () {}
 
@@ -118,6 +126,18 @@ class AboutUs extends Component {
         <div className="aboutUsWrapper">
           <div>{projectSummary()}</div>
           <div>{team()}</div>
+          <div>
+            <h2 style={{ marginLeft: '10px' }}>Find us here</h2>
+            {
+              <MyMapComponent
+                isMarkerShown
+                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${API.API_KEY_MAPS}&callback=initialize&libraries=geometry,drawing,places`}
+                loadingElement={<div style={{ height: '100%' }} />}
+                containerElement={<div style={{ height: '400px' }} />}
+                mapElement={<div style={{ height: '100%' }} />}
+              />
+            }
+          </div>
         </div>
       </div>
     )

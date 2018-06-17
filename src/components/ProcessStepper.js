@@ -8,10 +8,13 @@ const titleColor = '#2980b9'
 const step1 = {
   title: <h2 style={{ color: titleColor }}>CREATING A PROTOTYPE</h2>,
   content: (
-    <p>
-      The first step in the work process is to create a prototype. <br />
-      <br /> With the prototype finished we can commence the thermal conductivity measurements.
-    </p>
+    <div>
+      <p>
+        The first step in the work process is to create a prototype. <br />
+        <br /> With the prototype finished we can commence the thermal conductivity measurements.
+      </p>
+      <img src={require('../assets/meeting2.jpg')} alt="meeting" width="50%" />
+    </div>
   ),
 }
 

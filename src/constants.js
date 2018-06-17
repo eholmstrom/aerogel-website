@@ -1,3 +1,5 @@
+export const API_KEY_MAPS = 'AIzaSyD_nkkdya9Feyc8O8nz_oyjImYcKQ6U2oM'
+
 export const REGISTER_USER = 'REGISTER_USER'
 export const REGISTER_USER_SUCCESS = 'REGISTER_USER_SUCCESS'
 export const REGISTER_USER_FAIL = 'REGISTER_USER_FAIL'
