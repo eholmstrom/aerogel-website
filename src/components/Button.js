@@ -29,7 +29,7 @@ const buttonStyleDisable = {
 const buttonStyleRounded = {
   ...buttonStylePink,
   fontWeight: 'none',
-  background: '#ff805c',
+  background: '#77c9d4', // Large button welcome page.
 }
 
 const smallSize = {
