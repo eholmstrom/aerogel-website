@@ -14,7 +14,7 @@ const buttonStylePink = {
 const buttonStyleSecondary = {
   ...buttonStylePink,
   background: 'none',
-  color: '#fcbbcc',
+  color: '#77c9d4',
 }
 
 const buttonStyleDisable = {

@@ -128,6 +128,7 @@ class AboutUs extends Component {
           <div>{team()}</div>
           <div>
             <h2 style={{ marginLeft: '10px' }}>Find us here</h2>
+            <p style={{ marginLeft: '10px' }}> VentureLab at Scheelevägen 15, 223 70 Lund </p>
             {
               <MyMapComponent
                 isMarkerShown

@@ -3,7 +3,7 @@ import MediaQuery from 'react-responsive'
 import { Step, Stepper, StepButton, StepContent } from 'material-ui/Stepper'
 import Button from './Button'
 
-const titleColor = '#2980b9'
+const titleColor = '#3a5b6c'
 
 const step1 = {
   title: <h2 style={{ color: titleColor }}>CREATING A PROTOTYPE</h2>,
@@ -151,7 +151,7 @@ class ProcessStepper extends React.Component {
         }}
       >
         <MediaQuery minDeviceWidth={769}>
-          <h1 style={{ textAlign: 'center', marginBottom: 80, marginTop: 60 }}>WORK PROCESS</h1>
+          <h1 style={{ color: '#3a5b6c', textAlign: 'center', marginBottom: 60, marginTop: 60 }}>WORK PROCESS</h1>
         </MediaQuery>
         <ResponsiveStepper linear={false} activeStep={stepIndex}>
           <Step>
