@@ -151,7 +151,16 @@ class ProcessStepper extends React.Component {
         }}
       >
         <MediaQuery minDeviceWidth={769}>
-          <h1 style={{ color: '#3a5b6c', textAlign: 'center', marginBottom: 60, marginTop: 60 }}>WORK PROCESS</h1>
+          <h1
+            style={{
+              color: '#3a5b6c',
+              textAlign: 'center',
+              marginBottom: 60,
+              marginTop: 60,
+            }}
+          >
+            WORK PROCESS
+          </h1>
         </MediaQuery>
         <ResponsiveStepper linear={false} activeStep={stepIndex}>
           <Step>

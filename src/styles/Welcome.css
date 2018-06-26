@@ -1,7 +1,7 @@
 .Welcome {
   min-height: calc(100vh - 80px);
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url('../assets/landview_wetsuits.jpg');
+    url('../assets/landview_wetsuits_edited.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
