@@ -8,7 +8,7 @@ import { paths } from '../../containers/App'
 
 const styles = {
   drawer: {
-    backgroundColor: '#009790',
+    backgroundColor: '#3a5b6c',
     padding: 0,
   },
 
@@ -21,7 +21,7 @@ const styles = {
   },
 
   mobileMenuItemActive: {
-    backgroundColor: '#ff805c',
+    backgroundColor: '#77c9d4',
   },
 
   menuButton: {

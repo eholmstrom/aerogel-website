@@ -75,7 +75,7 @@ const renderFeaturesMobile = () => (
       <h2>Performance</h2>
       <div className="divider" />
       <p>
-        We've deleveloped a way for increasing the flexibility allowing for easier movement for the
+        We've developed a way for increasing the flexibility allowing for easier movement for the
         wearer while improving the insulation properties keeping you warm during long sessions.{' '}
       </p>
     </div>
