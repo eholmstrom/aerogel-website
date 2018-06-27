@@ -44,7 +44,7 @@ const renderFeatures = () => (
     </div>
     <div className="oneBox">
       <img
-        src={require('../assets/rubber-tree_small.jpg')}
+        src={require('../assets/rubber-tree_edited.jpg')}
         alt="rubber-tree"
         width="300"
         height="300"
@@ -81,7 +81,7 @@ const renderFeaturesMobile = () => (
     </div>
     <div className="oneBoxMobile">
       <img
-        src={require('../assets/rubber-tree_small.jpg')}
+        src={require('../assets/rubber-tree_edited.jpg')}
         alt="rubber-tree"
         width="300"
         height="300"
