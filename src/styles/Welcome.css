@@ -1,7 +1,6 @@
 .Welcome {
   min-height: calc(100vh - 80px);
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url('../assets/landview_wetsuits_edited.jpg');
+  background: url('../assets/landview_wetsuits_edited.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -62,4 +61,8 @@
   width: 70px;
   margin: 25px auto;
   border-color: #939598;
+}
+
+@media (max-width: 768px) {
+  background-attachment: none;
 }
