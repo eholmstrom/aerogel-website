@@ -10,9 +10,9 @@ const style = {
   buttonStyle: {
     fontSize: 22,
     margin: 20,
-    padding: '30px 25px 25px 25px',
+    padding: '25px 25px 25px 25px',
     minWidth: '20vw',
-    borderRadius: 3,
+    borderRadius: 5,
     boxShadow: '2px 2px 60px rgba(0, 0, 0, 0.5)',
   },
 }

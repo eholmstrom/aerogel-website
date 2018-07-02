@@ -52,12 +52,12 @@
 
 .oneBoxMobile {
   width: 300px;
-  margin: 0;
+  margin: 0 0 40px 0;
   text-align: center;
 }
 
 .divider {
-  border: solid 2px;
+  border: solid 1px;
   width: 70px;
   margin: 25px auto;
   border-color: #939598;
@@ -74,5 +74,13 @@
 
   .home-text p {
     margin: 0;
+  }
+
+  .divider {
+    margin: 15px auto;
+  }
+
+  h2 {
+    margin: 0.5em auto;
   }
 }
