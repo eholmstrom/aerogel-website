@@ -25,7 +25,7 @@
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: white;
-  margin-bottom: 15%;
+  margin-bottom: 20%;
 }
 
 .buttonWrapper {
@@ -66,5 +66,13 @@
 @media (max-width: 768px) {
   .Welcome {
     background-attachment: unset;
+  }
+
+  .home-text {
+    margin: -10% 0 30% -10%;
+  }
+
+  .home-text p {
+    margin: 0;
   }
 }
