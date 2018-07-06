@@ -1,7 +1,7 @@
 .main-div {
   min-height: calc(100% - 80px);
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url('../assets/surf-background2_large.jpg');
+    url('../assets/wave-surfing_edited.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

@@ -38,13 +38,13 @@ class Header extends Component {
 
   renderDesktopMenu = () => (
     <div className="Header-menu">
-      <div style={{ margin: '0 18% 0 20px' }}>
+      <div style={{ margin: '0 28% 0 20px' }}>
         <a href="/">
           <img
-            src={require('../assets/logo2_1.png')}
+            src={require('../assets/Vikloggaheader.png')}
             alt="logo"
-            width="192"
-            height="50"
+            width="55"
+            height="54"
             style={{ float: 'left' }}
           />
         </a>
