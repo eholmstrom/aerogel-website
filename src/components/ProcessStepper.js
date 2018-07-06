@@ -2,7 +2,7 @@ import React from 'react'
 import MediaQuery from 'react-responsive'
 import { Step, Stepper, StepButton, StepContent } from 'material-ui/Stepper'
 import Button from './Button'
-import GridList from './GridList'
+import TextMobileStepper from './GridListStepper'
 
 const titleColor = '#3a5b6c'
 
@@ -14,8 +14,14 @@ const step1 = {
         The first step in the work process is to create a prototype. <br />
         <br /> With the prototype finished we can commence the thermal conductivity measurements.
       </p>
-      <div style={{ display: 'flex', height: '100%', justifyContent: 'center' }}>
-        <GridList />
+      <div style={{ 
+        display: 'flex', 
+        height: '100%', 
+        marginTop: '30px', 
+        justifyContent: 'center', 
+        }}
+      >
+        <TextMobileStepper />
       </div>
     </div>
   ),
@@ -28,10 +34,16 @@ const step2 = {
       <p>
         Secondly, measurements must be performed to obtain information about elasticity, durability
         as well as the insulation properties. The thermal conductivity measurements will give us
-        quantitive information about the products performance compared to current wetsuits.
+        quantitive information about our product's performance compared to current wetsuits.
       </p>
-      <div style={{ display: 'flex', height: '100%', justifyContent: 'center' }}>
-        <img src={require('../assets/meeting2.jpg')} alt="meeting" width="50%" height="50%" />
+      <div style={{ 
+        display: 'flex', 
+        height: '100%', 
+        marginTop: '30px', 
+        justifyContent: 'center' 
+        }}
+      >
+        <TextMobileStepper />
       </div>
     </div>
   ),
@@ -43,10 +55,10 @@ const step3 = {
     <div>
       <p>
         When the optimal structure has been determined together with functioning material
-        performance we can begin the launch of the wetsuit.
+        performance we can begin the launch of our wetsuit.
       </p>
-      <div style={{ display: 'flex', height: '100%', justifyContent: 'center' }}>
-        <img src={require('../assets/meeting2.jpg')} alt="meeting" width="50%" height="50%" />
+      <div style={{ display: 'flex', height: '100%', marginTop: '30px', justifyContent: 'center' }}>
+        <TextMobileStepper />
       </div>
     </div>
   ),
@@ -168,8 +180,8 @@ class ProcessStepper extends React.Component {
             style={{
               color: '#3a5b6c',
               textAlign: 'center',
-              marginBottom: 60,
-              marginTop: 60,
+              marginBottom: 30,
+              marginTop: 50,
             }}
           >
             WORK PROCESS
