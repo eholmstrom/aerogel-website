@@ -2,6 +2,7 @@ import React from 'react'
 import MediaQuery from 'react-responsive'
 import { Step, Stepper, StepButton, StepContent } from 'material-ui/Stepper'
 import Button from './Button'
+import GridList from './GridList'
 
 const titleColor = '#3a5b6c'
 
@@ -13,7 +14,9 @@ const step1 = {
         The first step in the work process is to create a prototype. <br />
         <br /> With the prototype finished we can commence the thermal conductivity measurements.
       </p>
-      <img src={require('../assets/meeting2.jpg')} alt="meeting" width="50%" />
+      <div style={{ display: 'flex', height: '100%', justifyContent: 'center' }}>
+        <GridList />
+      </div>
     </div>
   ),
 }
@@ -21,21 +24,31 @@ const step1 = {
 const step2 = {
   title: <h2 style={{ color: titleColor }}>MEASUREMENTS</h2>,
   content: (
-    <p>
-      Secondly, measurements must be performed to obtain information about elasticity, durability as
-      well as the insulation properties. The thermal conductivity measurements will give us
-      quantitive information about the products performance compared to current wetsuits.
-    </p>
+    <div>
+      <p>
+        Secondly, measurements must be performed to obtain information about elasticity, durability
+        as well as the insulation properties. The thermal conductivity measurements will give us
+        quantitive information about the products performance compared to current wetsuits.
+      </p>
+      <div style={{ display: 'flex', height: '100%', justifyContent: 'center' }}>
+        <img src={require('../assets/meeting2.jpg')} alt="meeting" width="50%" height="50%" />
+      </div>
+    </div>
   ),
 }
 
 const step3 = {
   title: <h2 style={{ color: titleColor }}>LAUNCHING OUR WETSUIT</h2>,
   content: (
-    <p>
-      When the optimal structure has been determined together with functioning material performance
-      we can begin the launch of the wetsuit.
-    </p>
+    <div>
+      <p>
+        When the optimal structure has been determined together with functioning material
+        performance we can begin the launch of the wetsuit.
+      </p>
+      <div style={{ display: 'flex', height: '100%', justifyContent: 'center' }}>
+        <img src={require('../assets/meeting2.jpg')} alt="meeting" width="50%" height="50%" />
+      </div>
+    </div>
   ),
 }
 
