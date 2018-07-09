@@ -6,11 +6,12 @@
   background-attachment: fixed;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: top;
 }
 
 .homeWrapper {
   width: 65%;
+  margin-top: 7%;
 }
 
 .welcome-login-text {
@@ -21,11 +22,13 @@
 }
 
 .home-text {
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: white;
   margin-bottom: 20%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .buttonWrapper {

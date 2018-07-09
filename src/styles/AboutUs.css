@@ -1,13 +1,12 @@
 .main-div {
   min-height: calc(100% - 80px);
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url('../assets/wave-surfing_edited.jpg');
+  background: url('../assets/wave-surfing_edited.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: bottom;
 }
 
 .aboutUsWrapper {

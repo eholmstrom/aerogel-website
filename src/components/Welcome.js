@@ -20,8 +20,8 @@ const style = {
 const renderLoggedOut = () => (
   <div className="homeWrapper">
     <div className="home-text">
-      <img src={require('../assets/viklogga.png')} alt="logo" width="150" height="150" />
-      <p>Developing wetsuits without restrictions.</p>
+      <img src={require('../assets/vikloggavit_large.png')} alt="logo" width="267" height="150" />
+      <p>Experience unrestricted movement control</p>
     </div>
     <div className="buttonWrapper">
       <Link className="learn-more" to="/aboutus">
