@@ -1,17 +1,23 @@
 .main-div {
-  min-height: calc(100% - 80px);
+  min-height: calc(100vh - 80px);
   background: url('../assets/wave-surfing_edited.jpg');
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: unset;
   display: flex;
   justify-content: center;
-  align-items: bottom;
+  align-items: flex-end;
+}
+
+.main-div-aboutUs {
+  background: url('../assets/underwater.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 .aboutUsWrapper {
   max-width: 700px;
-  margin: 50px auto;
+  margin: 0 auto;
   background: linear-gradient(
     rgba(240, 240, 240, 0.9),
     rgba(240, 240, 240, 0.9)
@@ -22,7 +28,6 @@
 .projectSummary {
   text-align: left;
   font-size: 15px;
-  margin: 15px auto;
   padding: 10px;
 }
 

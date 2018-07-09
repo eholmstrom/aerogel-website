@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Responsive from 'react-responsive-decorator'
 import MediaQuery from 'react-responsive'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
+import * as Scroll from 'react-scroll'
 import Button from '../components/Button'
 import * as API from '../constants'
 
@@ -122,22 +123,34 @@ class AboutUs extends Component {
 
   render () {
     return (
-      <div className="main-div">
-        <div className="aboutUsWrapper">
-          <div>{projectSummary()}</div>
-          <div>{team()}</div>
-          <div>
-            <h2 style={{ marginLeft: '10px' }}>Find us here</h2>
-            <p style={{ marginLeft: '10px' }}> VentureLab at Scheelevägen 15, 223 70 Lund </p>
-            {
-              <MyMapComponent
-                isMarkerShown
-                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${API.API_KEY_MAPS}&callback=initialize&libraries=geometry,drawing,places`}
-                loadingElement={<div style={{ height: '100%' }} />}
-                containerElement={<div style={{ height: '400px' }} />}
-                mapElement={<div style={{ height: '100%' }} />}
-              />
-            }
+      <div>
+        <div className="main-div">
+          {' '}
+          <Scroll.Link activeClass="active" to="aboutUs" spy smooth offset={0} duration={700}>
+            <i className="material-icons" style={{ fontSize: '100px' }}>
+              keyboard_arrow_down
+            </i>
+          </Scroll.Link>
+        </div>
+        <div className="main-div-aboutUs" id="aboutUs">
+          <div className="aboutUsWrapper">
+            <div>{projectSummary()}</div>
+            <div>{team()}</div>
+            <div>
+              <h2 style={{ marginLeft: '10px' }}>Find us here</h2>
+              <p style={{ marginLeft: '10px' }}> VentureLab at Scheelevägen 15, 223 70 Lund </p>
+              {
+                <MyMapComponent
+                  isMarkerShown
+                  googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
+                    API.API_KEY_MAPS
+                  }&callback=initialize&libraries=geometry,drawing,places`}
+                  loadingElement={<div style={{ height: '100%' }} />}
+                  containerElement={<div style={{ height: '400px' }} />}
+                  mapElement={<div style={{ height: '100%' }} />}
+                />
+              }
+            </div>
           </div>
         </div>
       </div>
