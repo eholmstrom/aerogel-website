@@ -20,7 +20,7 @@ const style = {
 const renderLoggedOut = () => (
   <div className="homeWrapper">
     <div className="home-text">
-      <img src={require('../assets/vikloggavit_large.png')} alt="logo" width="229" height="130" />
+      <img src={require('../assets/vikloggavit.png')} alt="logo" width="229" height="130" />
       <p>Experience unrestricted movement control</p>
     </div>
     <div className="buttonWrapper">
