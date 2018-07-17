@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
+import Fade from 'react-reveal/Fade'
 import Responsive from 'react-responsive-decorator'
 import MediaQuery from 'react-responsive'
 
@@ -111,13 +112,17 @@ class Welcome extends Component {
   render () {
     return (
       <div>
-        <div className="Welcome">{renderLoggedOut()}</div>
-        <MediaQuery minDeviceWidth={768}>
-          <div className="featuresWrapper"> {renderFeatures()}</div>
-        </MediaQuery>
-        <MediaQuery maxDeviceWidth={768}>
-          <div className="featuresWrapper"> {renderFeaturesMobile()}</div>
-        </MediaQuery>
+        <Fade>
+          <div className="Welcome">{renderLoggedOut()}</div>
+        </Fade>
+        <Fade>
+          <MediaQuery minDeviceWidth={768}>
+            <div className="featuresWrapper"> {renderFeatures()}</div>
+          </MediaQuery>
+          <MediaQuery maxDeviceWidth={768}>
+            <div className="featuresWrapper"> {renderFeaturesMobile()}</div>
+          </MediaQuery>
+        </Fade>
       </div>
     )
   }

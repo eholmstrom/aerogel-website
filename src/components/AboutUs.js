@@ -4,6 +4,7 @@ import Responsive from 'react-responsive-decorator'
 import MediaQuery from 'react-responsive'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
 import * as Scroll from 'react-scroll'
+import Fade from 'react-reveal/Fade'
 import Button from '../components/Button'
 import * as API from '../constants'
 
@@ -25,9 +26,9 @@ const projectSummary = () => (
     <h1>About the project</h1>
     <p>
       {' '}
-      <h3>About you and Aquano</h3>
+      <h3>About you and VIK</h3>
       <p>
-        Welcome to Aquano and the future of watersport wetsuits. We are dedicated to give you a
+        Welcome to VIK and the future of watersport wetsuits. We are dedicated to give you a
         sustainable wetsuit with superior properties, you deserve it!
       </p>
       <h3>What are the problems today?</h3>
@@ -39,13 +40,13 @@ const projectSummary = () => (
       </p>
       <h3>So?</h3>
       <p>
-        At Aquano we combine the latest knowledge in material science with completely unique designs
+        At VIK we combine the latest knowledge in material science with completely unique designs
         to create wetsuits that are sustainable and have extraordinary insulating and mechanical
         properties. We want you to love your wetsuit.
       </p>
       <h3>And who are we?</h3>
       <p>
-        For now we are two persons running Aquano, Jakob Mattsson and Eric Holmström. Background in
+        For now we are two persons running VIK, Jakob Mattsson and Eric Holmström. Background in
         Nanotechnology and passion for surfing has been the seed for this idea to grow.
       </p>
     </p>
@@ -133,25 +134,27 @@ class AboutUs extends Component {
           </Scroll.Link>
         </div>
         <div className="main-div-aboutUs" id="aboutUs">
-          <div className="aboutUsWrapper">
-            <div>{projectSummary()}</div>
-            <div>{team()}</div>
-            <div>
-              <h2 style={{ marginLeft: '10px' }}>Find us here</h2>
-              <p style={{ marginLeft: '10px' }}> VentureLab at Scheelevägen 15, 223 70 Lund </p>
-              {
-                <MyMapComponent
-                  isMarkerShown
-                  googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
-                    API.API_KEY_MAPS
-                  }&callback=initialize&libraries=geometry,drawing,places`}
-                  loadingElement={<div style={{ height: '100%' }} />}
-                  containerElement={<div style={{ height: '400px' }} />}
-                  mapElement={<div style={{ height: '100%' }} />}
-                />
-              }
+          <Fade>
+            <div className="aboutUsWrapper">
+              <div>{projectSummary()}</div>
+              <div>{team()}</div>
+              <div>
+                <h2 style={{ marginLeft: '10px' }}>Find us here</h2>
+                <p style={{ marginLeft: '10px' }}> VentureLab at Scheelevägen 15, 223 70 Lund </p>
+                {
+                  <MyMapComponent
+                    isMarkerShown
+                    googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
+                      API.API_KEY_MAPS
+                    }&callback=initialize&libraries=geometry,drawing,places`}
+                    loadingElement={<div style={{ height: '100%' }} />}
+                    containerElement={<div style={{ height: '400px' }} />}
+                    mapElement={<div style={{ height: '100%' }} />}
+                  />
+                }
+              </div>
             </div>
-          </div>
+          </Fade>
         </div>
       </div>
     )
