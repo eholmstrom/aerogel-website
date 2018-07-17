@@ -3,22 +3,14 @@ import { Carousel } from 'react-responsive-carousel'
 
 import team from '../assets/team.jpg'
 import research from '../assets/research.jpg'
-import meeting from '../assets/meeting2.jpg'
 import surferBoard from '../assets/hoddevik_surfer_board.jpg'
-import surferRun from '../assets/hoddevik_surfer_run.jpg'
 
 class SlideShow extends React.Component {
   state = {}
 
   render () {
     return (
-      <Carousel autoPlay>
-        <div>
-          <img src={surferRun} alt="meeting" />
-        </div>
-        <div>
-          <img src={surferBoard} alt="meeting" />
-        </div>
+      <Carousel autoPlay interval={6000}>
         <div>
           <img src={team} alt="team" />
         </div>
@@ -26,7 +18,7 @@ class SlideShow extends React.Component {
           <img src={research} alt="research" />
         </div>
         <div>
-          <img src={meeting} alt="meeting" />
+          <img src={surferBoard} alt="surfer-with-board" />
         </div>
       </Carousel>
     )

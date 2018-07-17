@@ -3,16 +3,17 @@
   background: url('../assets/wave-surfing_edited.jpg');
   background-position: center;
   background-size: cover;
-  background-attachment: unset;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 
 .main-div-aboutUs {
-  background: url('../assets/underwater.jpg');
+  background: url('../assets/wave-surfing_edited.jpg');
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .aboutUsWrapper {

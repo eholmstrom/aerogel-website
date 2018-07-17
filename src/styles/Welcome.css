@@ -1,7 +1,6 @@
 .Welcome {
   min-height: calc(100vh - 80px);
-  background: url('../assets/landview_wetsuits_edited.jpg');
-  background-position: center;
+  background: url('../assets/hoddevik_seaview.jpg');
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -26,14 +25,15 @@
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: white;
-  margin-bottom: 20%;
+  margin: 8% 0 15% 0;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .buttonWrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .featuresWrapper {

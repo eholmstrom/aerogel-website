@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import * as Scroll from 'react-scroll'
 import Button from '../components/Button'
 import Fade from 'react-reveal/Fade'
 import Responsive from 'react-responsive-decorator'
@@ -21,13 +22,18 @@ const style = {
 const renderLoggedOut = () => (
   <div className="homeWrapper">
     <div className="home-text">
-      <img src={require('../assets/vikloggavit.png')} alt="logo" width="229" height="130" />
+      <img src={require('../assets/newviklogga.png')} alt="logo" width="229" height="130" />
       <p>Experience unrestricted movement control</p>
     </div>
     <div className="buttonWrapper">
       <Link className="learn-more" to="/aboutus">
         <Button style={style.buttonStyle} title="Learn More" type="tertiary" />
       </Link>
+      <Scroll.Link activeClass="active" to="features" spy smooth offset={0} duration={700}>
+        <i className="material-icons" style={{ fontSize: '100px' }}>
+          keyboard_arrow_down
+        </i>
+      </Scroll.Link>
     </div>
   </div>
 )
@@ -113,14 +119,20 @@ class Welcome extends Component {
     return (
       <div>
         <Fade>
-          <div className="Welcome">{renderLoggedOut()}</div>
+          <div className="Welcome"> {renderLoggedOut()} </div>
         </Fade>
         <Fade>
           <MediaQuery minDeviceWidth={768}>
-            <div className="featuresWrapper"> {renderFeatures()}</div>
+            <div className="featuresWrapper" id="features">
+              {' '}
+              {renderFeatures()}
+            </div>
           </MediaQuery>
           <MediaQuery maxDeviceWidth={768}>
-            <div className="featuresWrapper"> {renderFeaturesMobile()}</div>
+            <div className="featuresWrapper" id="features">
+              {' '}
+              {renderFeaturesMobile()}
+            </div>
           </MediaQuery>
         </Fade>
       </div>

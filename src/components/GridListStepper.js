@@ -8,7 +8,6 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 
 import team from '../assets/team.jpg'
 import research from '../assets/research.jpg'
-import meeting from '../assets/meeting2.jpg'
 
 const tutorialSteps = [
   {
@@ -18,10 +17,6 @@ const tutorialSteps = [
   {
     label: '',
     imgPath: research,
-  },
-  {
-    label: '',
-    imgPath: meeting,
   },
 ]
 

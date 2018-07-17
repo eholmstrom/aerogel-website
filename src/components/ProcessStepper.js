@@ -10,7 +10,6 @@ const titleColor = '#3a5b6c'
 
 const styleSlideShow = {
   display: 'flex',
-  height: '80%',
   marginTop: '30px',
   justifyContent: 'center',
 }
@@ -23,9 +22,6 @@ const step1 = {
         The first step in the work process is to create a prototype. <br />
         <br /> With the prototype finished we can commence the thermal conductivity measurements.
       </p>
-      <div style={styleSlideShow}>
-        <SlideShow />
-      </div>
     </div>
   ),
 }
@@ -39,9 +35,6 @@ const step2 = {
         as well as the insulation properties. The thermal conductivity measurements will give us
         quantitive information about our product's performance compared to current wetsuits.
       </p>
-      <div style={styleSlideShow}>
-        <SlideShow />
-      </div>
     </div>
   ),
 }
@@ -54,9 +47,6 @@ const step3 = {
         When the optimal structure has been determined together with functioning material
         performance we can begin the launch of our wetsuit.
       </p>
-      <div style={styleSlideShow}>
-        <SlideShow />
-      </div>
     </div>
   ),
 }
@@ -206,6 +196,7 @@ class ProcessStepper extends React.Component {
           <MediaQuery minDeviceWidth={769}>
             <div style={{ minHeight: 250, padding: '0 16px' }}>
               {this.getStepContent(stepIndex)}
+              <SlideShow />
             </div>
           </MediaQuery>
 

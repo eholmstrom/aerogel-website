@@ -41,7 +41,7 @@ class Header extends Component {
       <div style={{ margin: '0 28% 0 20px' }}>
         <a href="/">
           <img
-            src={require('../assets/Vikloggaheader.png')}
+            src={require('../assets/newheaderlogga.png')}
             alt="logo"
             width="55"
             height="54"
