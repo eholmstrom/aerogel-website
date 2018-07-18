@@ -41,7 +41,7 @@ const renderLoggedOut = () => (
 const renderFeatures = () => (
   <div className="boxWrapper">
     <div className="oneBox">
-      <img src={require('../assets/surfer-bw.jpg')} alt="surfer-bw" width="300" height="300" />
+      <img src={require('../assets/hoddevik_runningsurfer.jpg')} alt="surfer-bw" width="300" height="300" />
       <h2>Performance</h2>
       <div className="divider" />
       <p>

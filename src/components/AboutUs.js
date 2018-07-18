@@ -46,7 +46,7 @@ const projectSummary = () => (
       </p>
       <h3>And who are we?</h3>
       <p>
-        For now we are two persons running VIK, Jakob Mattsson and Eric Holmström. Background in
+        For now we are two people running VIK, Jakob Mattsson and Eric Holmström. Background in
         nanotechnology and passion for surfing has been the seed for this idea to grow.
       </p>
     </p>
