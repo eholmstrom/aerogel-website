@@ -35,19 +35,19 @@ const projectSummary = () => (
       <p>
         Oil!! Wetsuits are generally made out of raw oil and for sports like surfing and diving that
         are so related to nature itself, it’s quite ironic. And it doesn’t stop there. Wearing a
-        wetsuit today, your performance is drastically redued due to the superthick suit you
+        wetsuit today, your movement is drastically reduced due to the superthick suit you
         have to jump into. Not talking about the claustrophobic feeling…
       </p>
       <h3>So?</h3>
       <p>
-        At VIK we combine the latest knowledge in material science with completely unique designs
+        At VIK we combine the latest knowledge in materials science with completely unique designs
         to create wetsuits that are sustainable and have extraordinary insulating and mechanical
         properties. We want you to be aware of the environment but not of your wetsuit.
       </p>
       <h3>And who are we?</h3>
       <p>
         For now we are two people running VIK, Jakob Mattsson and Eric Holmström. Background in
-        nanotechnology and passion for surfing has been the seed for this idea to grow.
+        nanotechnology and a passion for surfing has been the seed for this idea to grow.
       </p>
     </p>
   </div>
