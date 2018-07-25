@@ -4,7 +4,7 @@
   /* min-width: 400px; */
   align-items: center;
   background-color: #3a5b6c; /* #009790 #2980b9 #ff805c */
-  background: rgba(76, 175, 80, 0.01);
+  background: rgba(76, 175, 80, 0);
 }
 
 .Header-menu {
