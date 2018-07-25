@@ -1,8 +1,24 @@
-html, body, .App, #root {
-    height: 100%;
-  }
-  
-  .App {
-    height: 100%;
-  }
-  
+html,
+body,
+.App,
+#root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+}
+
+.welcome {
+  min-height: calc(100vh - 80px);
+  background: url('../assets/hoddevik_seaview.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.aboutUs {
+  background: url('../assets/wave-surfing_edited.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}

@@ -65,7 +65,8 @@ const renderFeatures = () => (
       <div className="divider" />
       <p>
         Wetsuits made from renewable materials. The rubber is harvested from natural rubber trees
-        called <i>Hevea brasiliensis</i> resulting in isoprene.
+        called Hevea brasiliensis instead of synthetic rubber. Other materials used are particularly
+        chosen to have as little impact on the environment as possible.
       </p>
     </div>
     <div className="oneBox">

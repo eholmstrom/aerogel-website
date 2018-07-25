@@ -1,9 +1,5 @@
 .main-div {
   min-height: calc(100vh - 80px);
-  background: url('../assets/wave-surfing_edited.jpg');
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -55,7 +51,7 @@
     box-shadow: none;
   }
   .main-div {
-    min-height: calc(100% - 80px);
+    min-height: calc(100% - 0px);
     background-image: none;
   }
 }

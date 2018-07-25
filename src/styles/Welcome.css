@@ -1,12 +1,17 @@
 .Welcome {
   min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+}
+
+/*.Welcome {
+  min-height: calc(100vh - 80px);
   background: url('../assets/hoddevik_seaview.jpg');
   background-size: cover;
   background-attachment: fixed;
   display: flex;
   justify-content: center;
-  align-items: top;
-}
+}*/
 
 .homeWrapper {
   width: 60%;
@@ -44,7 +49,8 @@
   display: inline-flex;
   width: 100%;
   justify-content: space-around;
-  margin: 80px auto;
+  padding: 80px 0 40px 0;
+  background-color: white;
 }
 
 .oneBox {

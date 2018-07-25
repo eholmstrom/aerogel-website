@@ -29,26 +29,67 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <div style={{ height: '100%' }}>
-            <Header
-              loggedIn={!!this.props.accessToken}
-              admin={this.props.user}
-              logout={this.props.logout}
-            />
             <Switch>
               <Route
                 exact
                 path="/"
                 render={() => (
-                  <Welcome
-                    user={this.props.user}
-                    accessToken={this.props.accessToken}
-                    getUser={this.props.getUser}
-                  />
+                  <div className="welcome">
+                    <Header
+                      loggedIn={!!this.props.accessToken}
+                      admin={this.props.user}
+                      logout={this.props.logout}
+                    />
+                    <Welcome
+                      user={this.props.user}
+                      accessToken={this.props.accessToken}
+                      getUser={this.props.getUser}
+                    />
+                  </div>
                 )}
               />
-              <Route exact path="/workprocess" component={WorkProcess} />
-              <Route exact path="/contactus" component={ContactUs} />
-              <Route exact path="/aboutus" component={AboutUsContainer} />
+              <Route
+                exact
+                path="/workprocess"
+                render={() => (
+                  <div>
+                    <Header
+                      loggedIn={!!this.props.accessToken}
+                      admin={this.props.user}
+                      logout={this.props.logout}
+                    />
+                    <WorkProcess />
+                  </div>
+                )}
+              />
+              <Route
+                exact
+                path="/contactus"
+                render={() => (
+                  <div>
+                    <Header
+                      loggedIn={!!this.props.accessToken}
+                      admin={this.props.user}
+                      logout={this.props.logout}
+                    />
+                    <ContactUs />
+                  </div>
+                )}
+              />
+              <Route
+                exact
+                path="/aboutus"
+                render={() => (
+                  <div className="aboutUs">
+                    <Header
+                      loggedIn={!!this.props.accessToken}
+                      admin={this.props.user}
+                      logout={this.props.logout}
+                    />
+                    <AboutUsContainer />
+                  </div>
+                )}
+              />
             </Switch>
           </div>
         </BrowserRouter>

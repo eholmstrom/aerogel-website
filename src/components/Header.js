@@ -55,13 +55,9 @@ class Header extends Component {
   render () {
     return (
       <div className="Header">
-        <img
-          src={require('../assets/newheaderlogga.png')}
-          width="55"
-          height="54"
-          style={{ float: 'left', margin: '10px -55px 0 10px' }}
-          alt="logo"
-        />
+        <a href="/">
+          <img src={require('../assets/newheaderlogga.png')} width="55" height="54" alt="logo" />
+        </a>
         <MediaQuery minDeviceWidth={769}>{this.renderDesktopMenu()}</MediaQuery>
         <MediaQuery maxDeviceWidth={768}>{this.renderMobileMenu()}</MediaQuery>
       </div>
