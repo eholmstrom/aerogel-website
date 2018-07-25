@@ -26,28 +26,35 @@ const projectSummary = () => (
     <h1>About the project</h1>
     <p>
       {' '}
-      <h3>About you and VIK</h3>
+      <h3>
+        About you and <i>vik</i>
+      </h3>
       <p>
-        Welcome to VIK and the future of watersport wetsuits. We are dedicated to give you a
+        Welcome to <i>vik</i> and the future of watersport wetsuits. We are dedicated to give you a
         sustainable wetsuit with superior properties, you deserve it!
       </p>
       <h3>What are the problems today?</h3>
       <p>
-        Oil!! Wetsuits are generally made out of raw oil and for sports like surfing and diving that
-        are so related to nature itself, it’s quite ironic. And it doesn’t stop there. Wearing a
-        wetsuit today, your movement is drastically reduced due to the superthick suit you
-        have to jump into. Not talking about the claustrophobic feeling…
+        Oil!! Wetsuits are generally made of neoprene which is a petroleum based product. Ironic
+        considering the connection we have to nature while being in the water. If we still want to
+        be a part of nature we must do our best to preserve it. Not only that. Wetsuits today suffer
+        from being stiff, thick and our overall performance is reduced.
       </p>
       <h3>So?</h3>
       <p>
-        At VIK we combine the latest knowledge in materials science with completely unique designs
-        to create wetsuits that are sustainable and have extraordinary insulating and mechanical
-        properties. We want you to be aware of the environment but not of your wetsuit.
+        With inspiration from <i>Patagonia</i> and <i>Vissla</i> we have put focus on the
+        environment, however with a completely unique approach. Being sustainable should have impact
+        on nature, but also on you. We have put many hours in developing a completely new structure
+        that will totally change our way of thinking about wetsuits. Why should a green wetsuit
+        perform equally to traditional wetsuits? It should be BETTER! Rethinking materials, designs,
+        production has generated a sustainable wetsuit that will perform better in terms of
+        insulation and movement than the wetsuits on the market. Awesome right!? We want you to be{' '}
+        <i>aware</i> of the environment but not of your wetsuit.
       </p>
       <h3>And who are we?</h3>
       <p>
-        For now we are two people running VIK, Jakob Mattsson and Eric Holmström. Background in
-        nanotechnology and a passion for surfing has been the seed for this idea to grow.
+        For now we are two people running <i>vik</i>, Jakob Mattsson and Eric Holmström. Background
+        in nanotechnology and a passion for surfing has been the seed for this idea to grow.
       </p>
     </p>
   </div>

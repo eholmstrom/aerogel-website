@@ -19,8 +19,10 @@ const step1 = {
   content: (
     <div>
       <p>
-        The first step in the work process is to create a prototype. <br />
-        <br /> With the prototype finished we can commence the thermal conductivity measurements.
+        The first step in the work process is to create a prototype.<br />
+        <br />
+        This is an important step, determining if the product is easy to work with and if production
+        is scaleable.
       </p>
     </div>
   ),
@@ -31,9 +33,10 @@ const step2 = {
   content: (
     <div>
       <p>
-        Secondly, measurements must be performed to obtain information about elasticity, durability
-        as well as the insulation properties. The thermal conductivity measurements will give us
-        quantitive information about our product's performance compared to current wetsuits.
+        Theoretically our material should add performance to the water sport user. To assure you
+        about the quality of our product we need to do measurements regarding insulation, elasticity
+        and durability. These measurements will give us quantitive information about our product's
+        performance compared to current wetsuits.
       </p>
     </div>
   ),

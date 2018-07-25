@@ -38,17 +38,6 @@ class Header extends Component {
 
   renderDesktopMenu = () => (
     <div className="Header-menu">
-      <div style={{ margin: '0 28% 0 20px' }}>
-        <a href="/">
-          <img
-            src={require('../assets/newheaderlogga.png')}
-            alt="logo"
-            width="55"
-            height="54"
-            style={{ float: 'left' }}
-          />
-        </a>
-      </div>
       <MenuLinkItem title="Home" path={paths.home} activePath={this.props.location.pathname} />
       <MenuLinkItem
         path={paths.workProcess}
@@ -66,6 +55,13 @@ class Header extends Component {
   render () {
     return (
       <div className="Header">
+        <img
+          src={require('../assets/newheaderlogga.png')}
+          width="55"
+          height="54"
+          style={{ float: 'left', margin: '10px -55px 0 10px' }}
+          alt="logo"
+        />
         <MediaQuery minDeviceWidth={769}>{this.renderDesktopMenu()}</MediaQuery>
         <MediaQuery maxDeviceWidth={768}>{this.renderMobileMenu()}</MediaQuery>
       </div>

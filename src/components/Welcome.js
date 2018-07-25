@@ -39,9 +39,14 @@ const renderLoggedOut = () => (
 )
 
 const renderFeatures = () => (
-  <div className="boxWrapper">
+  <div className="boxWrapper" id="features">
     <div className="oneBox">
-      <img src={require('../assets/hoddevik_runningsurfer.jpg')} alt="surfer-bw" width="300" height="300" />
+      <img
+        src={require('../assets/hoddevik_runningsurfer.jpg')}
+        alt="surfer-bw"
+        width="300"
+        height="300"
+      />
       <h2>Performance</h2>
       <div className="divider" />
       <p>
@@ -51,7 +56,7 @@ const renderFeatures = () => (
     </div>
     <div className="oneBox">
       <img
-        src={require('../assets/rubber-tree_edited.jpg')}
+        src={require('../assets/two_surfers_beach.jpg')}
         alt="rubber-tree"
         width="300"
         height="300"
@@ -68,45 +73,8 @@ const renderFeatures = () => (
       <h2>Nanotechnology</h2>
       <div className="divider" />
       <p>
-        Introducing nanotechnology to watersports. This new kind of wetsuit keeps you warm while
-        improving the flexibility of the suit.
-      </p>
-    </div>
-  </div>
-)
-
-const renderFeaturesMobile = () => (
-  <div>
-    <div className="oneBoxMobile">
-      <img src={require('../assets/surfer-bw.jpg')} alt="surfer-bw" width="300" height="300" />
-      <h2>Performance</h2>
-      <div className="divider" />
-      <p>
-        We've developed a way for increasing the flexibility allowing for easier movement for the
-        wearer while improving the insulation properties keeping you warm during long sessions.{' '}
-      </p>
-    </div>
-    <div className="oneBoxMobile">
-      <img
-        src={require('../assets/rubber-tree_edited.jpg')}
-        alt="rubber-tree"
-        width="300"
-        height="300"
-      />
-      <h2>Sustainability</h2>
-      <div className="divider" />
-      <p>
-        Our wetsuits are made from renewable materials. The rubber is harvested from natural rubber
-        trees called <i>Hevea brasiliensis</i> resulting in isoprene.
-      </p>
-    </div>
-    <div className="oneBoxMobile">
-      <img src={require('../assets/porosity.jpg')} alt="porosity" width="300" height="300" />
-      <h2>Nanotechnology</h2>
-      <div className="divider" />
-      <p>
-        Introducing nanotechnology to watersports. This new kind of wetsuit keeps you warm while
-        improving the flexibility of the suit.
+        Introducing nanotechnology to watersports. New development in material research make it
+        possible to enhance insulation without increasing the thickness of the suit.
       </p>
     </div>
   </div>
@@ -121,23 +89,13 @@ class Welcome extends Component {
         <Fade>
           <div className="Welcome"> {renderLoggedOut()} </div>
         </Fade>
-        <Fade>
-          <MediaQuery minDeviceWidth={768}>
-            <div className="featuresWrapper" id="features">
-              {' '}
-              {renderFeatures()}
-            </div>
-          </MediaQuery>
-          <MediaQuery maxDeviceWidth={768}>
-            <div className="featuresWrapper" id="features">
-              {' '}
-              {renderFeaturesMobile()}
-            </div>
-          </MediaQuery>
-        </Fade>
+        <Fade>{renderFeatures()}</Fade>
       </div>
     )
   }
 }
+
+// <div className="featuresWrapper" id="features">
+// { ' ' }
 
 export default Welcome
