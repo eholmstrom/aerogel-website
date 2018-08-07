@@ -97,7 +97,7 @@ class App extends Component {
                 exact
                 path="/blog"
                 render={() => (
-                  <div className="blog">
+                  <div>
                     <Header
                       loggedIn={!!this.props.accessToken}
                       admin={this.props.user}

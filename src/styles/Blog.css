@@ -1,0 +1,20 @@
+.blogWrapper {
+  display: block;
+  max-width: 700px;
+  margin: 0 auto 0 80px;
+  justify-content: center;
+}
+
+.sidePicture {
+  width: 30%;
+  background: url('../assets/bloggbild.png');
+  background-size: cover;
+  min-height: calc(100vh - 80px);
+}
+
+.divider {
+  border: solid 0.3px;
+  width: 100%;
+  margin: 40px auto;
+  border-color: #939598;
+}
