@@ -1,10 +1,10 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
 import { Step, Stepper, StepButton, StepContent } from 'material-ui/Stepper'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import Button from './Button'
 import TextMobileStepper from './GridListStepper'
 import SlideShow from './SlideShow'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const titleColor = '#3a5b6c'
 

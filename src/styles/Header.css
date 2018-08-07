@@ -2,9 +2,7 @@
   height: 80px;
   width: 100%;
   /* min-width: 400px; */
-  align-items: center;
-  background-color: #3a5b6c; /* #009790 #2980b9 #ff805c */
-  background: rgba(76, 175, 80, 0);
+  align-items: center; /*  background-color: #3a5b6c; background: rgba(76, 175, 80, 0); #009790 #2980b9 #ff805c */
 }
 
 .Header-menu {
@@ -30,6 +28,7 @@
   margin-left: 20px !important;
   margin-right: 20px !important;
   color: #3a5b6c !important;
+  font-weight: 700; /* TESTAR NYTT */
 }
 
 .Header-button-menu-active {

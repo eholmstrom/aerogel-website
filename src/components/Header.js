@@ -49,15 +49,34 @@ class Header extends Component {
         title="About Us"
         activePath={this.props.location.pathname}
       />
+      <MenuLinkItem path={paths.blog} title="Blog" activePath={this.props.location.pathname} />
+      <MenuLinkItem
+        path={paths.contactUs}
+        title="Contact Us"
+        activePath={this.props.location.pathname}
+      />
     </div>
   )
 
   render () {
     return (
       <div className="Header">
-        <a href="/">
-          <img src={require('../assets/newheaderlogga.png')} width="55" height="54" alt="logo" />
-        </a>
+        {this.props.location.pathname === '/workprocess' ||
+        this.props.location.pathname === '/contactus' ||
+        this.props.location.pathname === '/blog' ? (
+          <a href="/">
+            <img
+              src={require('../assets/newheaderlogga_svart.png')}
+              width="55"
+              height="54"
+              alt="logo"
+            />
+          </a>
+        ) : (
+          <a href="/">
+            <img src={require('../assets/newheaderlogga.png')} width="55" height="54" alt="logo" />
+          </a>
+        )}
         <MediaQuery minDeviceWidth={769}>{this.renderDesktopMenu()}</MediaQuery>
         <MediaQuery maxDeviceWidth={768}>{this.renderMobileMenu()}</MediaQuery>
       </div>

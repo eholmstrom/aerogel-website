@@ -9,6 +9,7 @@ import Welcome from '../components/Welcome'
 import WorkProcess from './WorkProcess'
 import ContactUs from './ContactUs'
 import AboutUsContainer from './AboutUsContainer'
+import BlogContainer from './BlogContainer'
 
 import '../styles/App.css'
 
@@ -17,6 +18,8 @@ export const paths = {
   login: '/login',
   workProcess: '/workprocess',
   aboutUs: '/aboutus',
+  blog: '/blog',
+  contactUs: '/contactus',
 }
 
 class App extends Component {
@@ -90,6 +93,20 @@ class App extends Component {
                   </div>
                 )}
               />
+              <Route
+                exact
+                path="/blog"
+                render={() => (
+                  <div className="blog">
+                    <Header
+                      loggedIn={!!this.props.accessToken}
+                      admin={this.props.user}
+                      logout={this.props.logout}
+                    />
+                    <BlogContainer />
+                  </div>
+                )}
+              />
             </Switch>
           </div>
         </BrowserRouter>
@@ -97,12 +114,14 @@ class App extends Component {
     )
   }
 }
+
 /*
 App.propTypes = {
   accessToken: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   user: PropTypes.object,
   getUser: PropTypes.func.isRequired,
   logout: PropTypes.func.isRequired,
+  changeLogo: PropTypes.func.isRequired,
   rehydrateToken: PropTypes.func.isRequired,
 }
 
@@ -122,4 +141,5 @@ function mapDispatchToProps (dispatch) {
   return bindActionCreators(dispatch)
 }
 */
+
 export default App // connect(mapStateToProps, mapDispatchToProps)(App)
