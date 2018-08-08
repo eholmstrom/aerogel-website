@@ -17,6 +17,14 @@ const style = {
     borderRadius: 5,
     boxShadow: '2px 2px 60px rgba(0, 0, 0, 0.5)',
   },
+  buttonStyleMobile: {
+    fontSize: 16,
+    margin: '20px 5px 5px 5px',
+    padding: '25px 25px 25px 25px',
+    minWidth: '20vw',
+    borderRadius: 5,
+    boxShadow: '2px 2px 60px rgba(0, 0, 0, 0.5)',
+  },
 }
 
 const renderLoggedOut = () => (
@@ -28,6 +36,25 @@ const renderLoggedOut = () => (
     <div className="buttonWrapper">
       <Link className="learn-more" to="/aboutus">
         <Button style={style.buttonStyle} title="Learn More" type="tertiary" />
+      </Link>
+      <Scroll.Link activeClass="active" to="features" spy smooth offset={0} duration={700}>
+        <i className="material-icons" style={{ fontSize: '100px' }}>
+          keyboard_arrow_down
+        </i>
+      </Scroll.Link>
+    </div>
+  </div>
+)
+
+const renderLoggedOutMobile = () => (
+  <div className="homeWrapper">
+    <div className="home-text">
+      <img src={require('../assets/newviklogga.png')} alt="logo" width="229" height="130" />
+      <p>Sustainability for enhanced performance</p>
+    </div>
+    <div className="buttonWrapper">
+      <Link className="learn-more" to="/aboutus">
+        <Button style={style.buttonStyleMobile} title="Learn More" type="tertiary" />
       </Link>
       <Scroll.Link activeClass="active" to="features" spy smooth offset={0} duration={700}>
         <i className="material-icons" style={{ fontSize: '100px' }}>
@@ -88,7 +115,10 @@ class Welcome extends Component {
     return (
       <div>
         <Fade>
-          <div className="Welcome"> {renderLoggedOut()} </div>
+          <div className="Welcome">
+            <MediaQuery minDeviceWidth={769}>{renderLoggedOut()}</MediaQuery>
+            <MediaQuery maxDeviceWidth={768}>{renderLoggedOutMobile()}</MediaQuery>
+          </div>
         </Fade>
         <Fade>{renderFeatures()}</Fade>
       </div>
