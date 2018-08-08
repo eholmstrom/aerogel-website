@@ -86,9 +86,7 @@ class Blog extends React.Component {
           </div>
         </MediaQuery>
         <div className="blogWrapper">
-          <h1>
-            BLOG
-          </h1>
+          <h1>BLOG</h1>
           {blogpost1.title}
           <LongText content={blogpost1.content} limit={limit} />
           <div className="blog-divider" />

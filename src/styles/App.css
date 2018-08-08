@@ -27,4 +27,8 @@ body,
   .welcome {
     background-size: unset;
   }
+  .aboutUs {
+    background-size: unset;
+    background-position: top;
+  }
 }

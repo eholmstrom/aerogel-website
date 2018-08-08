@@ -53,4 +53,7 @@
   .main-div {
     background-image: none;
   }
+  .main-div i {
+    margin-bottom: 60px;
+  }
 }
