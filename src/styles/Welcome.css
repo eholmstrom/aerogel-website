@@ -45,15 +45,6 @@
   left: 31.6%;
 }
 
-.button {
-  font-size: 22;
-  margin: 20px;
-  padding: 25px 25px 25px 25px;
-  min-width: 20vw;
-  border-radius: 5;
-  box-shadow: 2px 2px 60px rgba(0, 0, 0, 0.5);
-}
-
 .boxWrapper {
   display: inline-flex;
   width: 100%;
