@@ -25,7 +25,7 @@ body,
 
 @media (max-width: 768px) {
   .welcome {
-    background-size: unset;
+    background-size: unset; /* background-attachment: fixed; not enabled on mobiles */
   }
   .aboutUs {
     background-size: unset;

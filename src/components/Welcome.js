@@ -23,7 +23,7 @@ const renderLoggedOut = () => (
   <div className="homeWrapper">
     <div className="home-text">
       <img src={require('../assets/newviklogga.png')} alt="logo" width="229" height="130" />
-      <p>Experience unrestricted movement control</p>
+      <p>Sustainability for enhanced performance</p>
     </div>
     <div className="buttonWrapper">
       <Link className="learn-more" to="/aboutus">
