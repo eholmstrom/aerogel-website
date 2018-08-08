@@ -86,14 +86,7 @@ class Blog extends React.Component {
           </div>
         </MediaQuery>
         <div className="blogWrapper">
-          <h1
-            style={{
-              color: '#3a5b6c',
-              textAlign: 'center',
-              marginBottom: 50,
-              marginTop: 50,
-            }}
-          >
+          <h1>
             BLOG
           </h1>
           {blogpost1.title}

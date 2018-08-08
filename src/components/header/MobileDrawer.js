@@ -72,6 +72,18 @@ const MobileDrawer = props => (
       activePath={props.location.pathname}
       onClick={props.handleDrawerToggle}
     />
+    <MobileMenuItem
+      title="Blog"
+      path={paths.blog}
+      activePath={props.location.pathname}
+      onClick={props.handleDrawerToggle}
+    />
+    <MobileMenuItem
+      title="Contact Us"
+      path={paths.contactUs}
+      activePath={props.location.pathname}
+      onClick={props.handleDrawerToggle}
+    />
   </Drawer>
 )
 

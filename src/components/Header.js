@@ -23,11 +23,21 @@ class Header extends Component {
 
   renderMobileMenu = () => (
     <div>
-      <FlatButton
-        style={{ marginTop: 20, color: 'white' }}
-        icon={<Menu />}
-        onClick={this.handleDrawerToggle}
-      />
+      {this.props.location.pathname === '/workprocess' ||
+      this.props.location.pathname === '/contactus' ||
+      this.props.location.pathname === '/blog' ? (
+        <FlatButton
+          style={{ marginTop: 20, color: 'black' }}
+          icon={<Menu />}
+          onClick={this.handleDrawerToggle}
+        />
+      ) : (
+        <FlatButton
+          style={{ marginTop: 20, color: 'white' }}
+          icon={<Menu />}
+          onClick={this.handleDrawerToggle}
+        />
+      )}
       <MobileDrawer
         {...this.props}
         open={this.state.drawerOpen}

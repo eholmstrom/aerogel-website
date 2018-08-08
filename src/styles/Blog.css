@@ -6,6 +6,13 @@
   white-space: pre-line;
 }
 
+.blogWrapper h1 {
+  color: #3a5b6c;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
 .sidePicture {
   width: 30%;
   background: url('../assets/bloggbild.png');
@@ -24,4 +31,14 @@
   width: 100%;
   margin: 40px auto;
   border-color: #939598;
+}
+
+@media (max-width: 768px) {
+  .blogWrapper {
+    margin: 10px;
+  }
+
+  .blogWrapper h1 {
+    margin: 20px auto 20px auto;
+  }
 }
