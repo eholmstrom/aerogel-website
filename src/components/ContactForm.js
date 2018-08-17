@@ -31,9 +31,9 @@ const team = () => (
             </a>{' '}
             <br />
             <i className="material-icons">mail</i>
-            <a style={{ color: '#000000' }} href="mailto:eric_holmstrom@hotmail.com">
+            <a style={{ color: '#000000' }} href="mailto:eric@viksports.org">
               {' '}
-              eric_holmstrom@hotmail.com{' '}
+              eric@viksports.org{' '}
             </a>
           </p>
         </div>
@@ -57,9 +57,9 @@ const team = () => (
             </a>{' '}
             <br />
             <i className="material-icons">mail</i>
-            <a style={{ color: '#000000' }} href="mailto:jammattsson@mac.com">
+            <a style={{ color: '#000000' }} href="mailto:jakob@viksports.org">
               {' '}
-              jammattsson@mac.com{' '}
+              jakob@viksports.org{' '}
             </a>
           </p>
         </div>
@@ -74,65 +74,100 @@ class BookForm extends Component {
     super(props)
 
     this.state = {
-      personName: '',
-      personEmail: '',
+      name: '',
+      email: '',
       phoneNumber: '',
       message: '',
+      sent: false,
+      error: false,
     }
   }
 
   setChange = (key, val) => {
     this.setState({ [key]: val })
   }
+
+  handleSubmit = (e) => {
+    const payload = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message,
+      phoneNumber: this.state.phoneNumber,
+    }
+    const API_URL = 'https://lkry4buagb.execute-api.eu-west-1.amazonaws.com/default/sendEmail'
+
+    fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: {
+        name: payload.name,
+        email: payload.email,
+        message: payload.message,
+        phoneNumber: payload.phoneNumber,
+      },
+    }).then(
+      () => {
+        this.setState({ sent: true })
+      },
+      () => {
+        this.setState({ error: true })
+      },
+    )
+    e.preventDefault()
+  }
+
   render () {
     return (
       <div className="contact-wrapper">
-        <div>
-          <h1>Contact us</h1>
-          <p>
-            The contact form is currently under development. <br />To contact us use this
-            information for now.
-          </p>
-          {team()}
+        <div className="contactform">
+          <TextField
+            fullWidth
+            value={this.state.name}
+            floatingLabelText="Name"
+            hintText="Name"
+            onChange={(evt, val) => this.setChange('name', val)}
+            type="required"
+          />
+          <TextField
+            fullWidth
+            floatingLabelText="Phone number"
+            hintText="Phone number"
+            required
+            value={this.state.phoneNumber}
+            onChange={(evt, val) => this.setChange('phoneNumber', val)}
+          />
+          <TextField
+            fullWidth
+            floatingLabelText="Email"
+            hintText="Email"
+            required
+            value={this.state.email}
+            onChange={(evt, val) => this.setChange('email', val)}
+          />
+          <TextField
+            fullWidth
+            floatingLabelText="Message"
+            value={this.state.message}
+            multiLine
+            rows={5}
+            onChange={(evt, val) => this.setChange('message', val)}
+          />
         </div>
+        <Button title="Send" type="tertiary" onClick={this.handleSubmit} />
       </div>
     )
   }
 }
-/* <div className="contactform">
-            <TextField
-              fullWidth
-              value={this.state.personName}
-              floatingLabelText="Name"
-              hintText="Name"
-              onChange={(evt, val) => this.setChange('personName', val)}
-              type="required"
-            />
-            <TextField
-              fullWidth
-              floatingLabelText="Phone number"
-              hintText="Phone number"
-              required
-              value={this.state.phoneNumber}
-              onChange={(evt, val) => this.setChange('phoneNumber', val)}
-            />
-            <TextField
-              fullWidth
-              floatingLabelText="Email"
-              hintText="Email"
-              required
-              value={this.state.personEmail}
-              onChange={(evt, val) => this.setChange('personEmail', val)}
-            />
-            <TextField
-              fullWidth
-              floatingLabelText="Message"
-              value={this.state.message}
-              multiLine
-              rows={5}
-              onChange={(evt, val) => this.setChange('message', val)}
-            />
-          </div>
-          <Button title="Send" type="tertiary" onClick={this.onConfirm} /> */
+/* <div>
+  <h1>Contact us</h1>
+  <p>
+    The contact form is currently under development. <br />To contact us use this
+    information for now.
+  </p>
+  {team()}
+</div> */
 
 export default BookForm

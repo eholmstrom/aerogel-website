@@ -83,9 +83,9 @@ const team = () => (
             </a>{' '}
             <br />
             <i className="material-icons">mail</i>
-            <a style={{ color: '#000000' }} href="mailto:eric_holmstrom@hotmail.com">
+            <a style={{ color: '#000000' }} href="mailto:eric@viksports.org">
               {' '}
-              eric_holmstrom@hotmail.com{' '}
+              eric@viksports.org{' '}
             </a>
           </p>
         </div>
@@ -109,9 +109,9 @@ const team = () => (
             </a>{' '}
             <br />
             <i className="material-icons">mail</i>
-            <a style={{ color: '#000000' }} href="mailto:jammattsson@mac.com">
+            <a style={{ color: '#000000' }} href="mailto:jakob@viksports.org">
               {' '}
-              jammattsson@mac.com{' '}
+              jakob@viksports.org{' '}
             </a>
           </p>
         </div>

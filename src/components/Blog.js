@@ -36,11 +36,19 @@ const blogpost1 = {
 }
 
 const blogpost2 = {
-  title: <h2 style={styles.h2}>Genuine interest from others inpire us</h2>,
+  title: <h2 style={styles.h2}>Genuine interest from others inspire us</h2>,
   date: <h3 style={styles.h3}>August 10, 2018</h3>,
   content:
     'The flatness of the Baltic sea this summer is turning into some kind of desperation. We are taking less days off work which is a good thing, but mainly it generates a lot of travel searching, video watching etc… Also, without having any scientific backup here, I am sure that regular surfing makes me work more efficiently. Maybe someone else can back me up on this? Sitting here writing I know the sea is finally gaining some swell and I can’t wait to paddle out! \n\n Summarizing the week, I realize that things really start to move forward. I would guess it is a mix of having a surf to look forward to but also that people in Sweden start to work again. Not only are they answering, it is fantastic when people listen to our idea and give us feedback. Most of the time, people love what they hear and that is great motivation! \n\n And the website is FINALLY up. Hosting a website not only means buying a domain… I am so glad Eric is a pro in these things! \n\n Next week will include some corporation discussions, looking into legal documents for startups and continue to develop the website. Have a windy weekend!',
   author: <h3 style={styles.author}>Jakob Mattsson</h3>,
+}
+
+const blogpost3 = {
+  title: <h2 style={styles.h2}>Visit to a local rubber manufacturer</h2>,
+  date: <h3 style={styles.h3}>August 17, 2018</h3>,
+  content:
+    'Our project is progressing rapidly, sometimes so fast that we need to dedicate some time to come up with new short-term goals, which, I guess, itself is just a luxury problem. \n\n We had an incredibly informative and useful visit to a local rubber manufacturer. They were knowledgeable about specifics with rubber manufacturing that helped us. It also gave rise to some difficulties with using our chosen materials. However, we quickly realized that as an entrepeneur you are going to face some problems along the way and they are just meant to be solved. \n\n The school start is coming closer and that means preparing for our thesis work. An increasing number of other duties are grabbing our attention and are ready to distract us from our development of wetsuits. But so far have we managed to keep our minds on completing our many short-term goals.',
+  author: <h3 style={styles.author}>Eric Holmström</h3>,
 }
 
 // eslint-disable-next-line
@@ -61,6 +69,10 @@ class Blog extends React.Component {
         </MediaQuery>
         <div className="blogWrapper">
           <h1>BLOG</h1>
+          {blogpost3.title}
+          {blogpost3.date}
+          <LongText content={blogpost3.content} limit={limit} />
+          {blogpost3.author}
           {blogpost2.title}
           {blogpost2.date}
           <LongText content={blogpost2.content} limit={limit} />
