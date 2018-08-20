@@ -13,6 +13,10 @@
   margin-top: 50px;
 }
 
+.blogWrapper p {
+  font-size: 14px;
+}
+
 .sidePicture {
   width: 30%;
   background: url('../assets/bloggbild.png');
