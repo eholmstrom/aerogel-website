@@ -116,7 +116,14 @@ class Welcome extends Component {
       <div>
         <Fade>
           <div className="Welcome">
-            <MediaQuery minDeviceWidth={769}>{renderLoggedOut()}</MediaQuery>
+            <MediaQuery minDeviceWidth={769}>
+              {' '}
+              <div className="top-right">
+                <p className="top-right-p">Reinventing the design of wetsuits</p>
+                <div className="divider-mini" />
+              </div>
+              {renderLoggedOut()}
+            </MediaQuery>
             <MediaQuery maxDeviceWidth={768}>{renderLoggedOutMobile()}</MediaQuery>
           </div>
         </Fade>

@@ -73,6 +73,7 @@ class Blog extends React.Component {
           {blogpost3.date}
           <LongText content={blogpost3.content} limit={limit} />
           {blogpost3.author}
+          <div className="blog-divider" />
           {blogpost2.title}
           {blogpost2.date}
           <LongText content={blogpost2.content} limit={limit} />

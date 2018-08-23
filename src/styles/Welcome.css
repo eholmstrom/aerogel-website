@@ -4,6 +4,26 @@
   justify-content: center;
 }
 
+.top-right {
+  position: absolute;
+  top: 150px;
+  right: 150px;
+}
+
+.top-right-p {
+  font-size: 16px;
+  color: #3a5b6c;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.divider-mini {
+  border: solid 0.5px;
+  width: 70%;
+  margin: 15px auto;
+  border-color: #939598;
+}
+
 /*.Welcome {
   min-height: calc(100vh - 80px);
   background: url('../assets/hoddevik_seaview.jpg');
