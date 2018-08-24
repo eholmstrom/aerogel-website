@@ -96,14 +96,12 @@
   .homeWrapper {
     margin-top: 0;
   }
-  .home-text {
-    font-size: 16px;
-  }
   .home-text img {
     margin-bottom: 20px;
   }
   .home-text p {
     margin: 0;
+    font-size: 18px;
   }
 
   .divider {

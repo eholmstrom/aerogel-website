@@ -51,6 +51,14 @@ const blogpost3 = {
   author: <h3 style={styles.author}>Eric Holmström</h3>,
 }
 
+const blogpost4 = {
+  title: <h2 style={styles.h2}>Time to mingle</h2>,
+  date: <h3 style={styles.h3}>August 24, 2018</h3>,
+  content:
+    'A week full of inspiration and new opportunities. The atmosphere around Ideon in Lund is full of networking possibilities when the city starts to be alive again. People have energy, goals, optimism and it is just amazing to be a part of this startup world. Never have I felt such a force to talk to random people and it is super refreshing to have insight in other companies and learn from them. One meeting worth mentioning this week is the one with Jan Persson from Revolwe who produces surf leashes from sustainable materials. \n And our wetsuit project goes forward quickly. Our nearest goal is to test our production method in the following four weeks and that is super crucial step for us. School is really approaching and it will of course take some time of the project but we love the idea of doing a combo this fall. \n\n Learning of the week: from the workshop with business angel Hampus Jakobsson. No one really cares about your solution, only the problem that you are solving.',
+  author: <h3 style={styles.author}>Eric Holmström</h3>,
+}
+
 // eslint-disable-next-line
 class Blog extends React.Component {
   render () {
@@ -69,6 +77,11 @@ class Blog extends React.Component {
         </MediaQuery>
         <div className="blogWrapper">
           <h1>BLOG</h1>
+          {blogpost4.title}
+          {blogpost4.date}
+          <LongText content={blogpost4.content} limit={limit} />
+          {blogpost4.author}
+          <div className="blog-divider" />
           {blogpost3.title}
           {blogpost3.date}
           <LongText content={blogpost3.content} limit={limit} />

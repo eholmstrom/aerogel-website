@@ -102,12 +102,7 @@ class BookForm extends Component {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: {
-        name: payload.name,
-        email: payload.email,
-        message: payload.message,
-        phoneNumber: payload.phoneNumber,
-      },
+      body: JSON.stringify(payload),
     }).then(
       () => {
         this.setState({ sent: true })

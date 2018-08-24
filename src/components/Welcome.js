@@ -49,7 +49,7 @@ const renderLoggedOut = () => (
 const renderLoggedOutMobile = () => (
   <div className="homeWrapper">
     <div className="home-text">
-      <img src={require('../assets/newviklogga.png')} alt="logo" width="229" height="130" />
+      <img src={require('../assets/newviklogga.png')} alt="logo" width="194" height="110" />
       <p>Sustainability for enhanced performance</p>
     </div>
     <div className="buttonWrapper">
@@ -92,8 +92,8 @@ const renderFeatures = () => (
       <div className="divider" />
       <p>
         Wetsuits made from renewable materials. The rubber is harvested from natural rubber trees
-        called Hevea brasiliensis instead of synthetic rubber. Other materials used are particularly
-        chosen to have as little impact on the environment as possible.
+        called <i>Hevea brasiliensis</i> instead of synthetic rubber. Other materials used are
+        particularly chosen to have as little impact on the environment as possible.
       </p>
     </div>
     <div className="oneBox">
@@ -117,11 +117,13 @@ class Welcome extends Component {
         <Fade>
           <div className="Welcome">
             <MediaQuery minDeviceWidth={769}>
-              {' '}
-              <div className="top-right">
-                <p className="top-right-p">Reinventing the design of wetsuits</p>
-                <div className="divider-mini" />
-              </div>
+              <Fade delay={1000}>
+                {' '}
+                <div className="top-right">
+                  <p className="top-right-p">Reinventing wetsuits</p>
+                  <div className="divider-mini" />
+                </div>
+              </Fade>
               {renderLoggedOut()}
             </MediaQuery>
             <MediaQuery maxDeviceWidth={768}>{renderLoggedOutMobile()}</MediaQuery>
