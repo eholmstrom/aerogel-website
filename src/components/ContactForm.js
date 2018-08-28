@@ -94,13 +94,13 @@ class BookForm extends Component {
       message: this.state.message,
       phoneNumber: this.state.phoneNumber,
     }
+    console.log(payload)
     const API_URL = 'https://lkry4buagb.execute-api.eu-west-1.amazonaws.com/default/sendEmail'
 
     fetch(API_URL, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
-        'Content-Type': 'application/json',
       },
       body: JSON.stringify(payload),
     }).then(
