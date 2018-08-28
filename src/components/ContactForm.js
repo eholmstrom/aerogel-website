@@ -6,6 +6,7 @@ import TextField from 'material-ui/TextField'
 import MenuItem from 'material-ui/MenuItem'
 import SelectField from 'material-ui/SelectField'
 
+import AlertDialog from './AlertDialog'
 import Button from '../components/Button'
 import '../styles/ContactForm.css'
 
@@ -111,6 +112,13 @@ class BookForm extends Component {
         this.setState({ error: true })
       },
     )
+    this.setState({ sent: true })
+    this.setState({
+      name: '',
+      email: '',
+      message: 'Success! \nMessage was sent. \n\nThank you! We will be in touch with you shortly.',
+      phoneNumber: '',
+    })
     e.preventDefault()
   }
 
