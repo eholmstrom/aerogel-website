@@ -1,3 +1,5 @@
+export const API_KEY_AWSLAMBDA =
+  'https://lkry4buagb.execute-api.eu-west-1.amazonaws.com/default/sendEmail'
 export const API_KEY_MAPS = 'AIzaSyD_nkkdya9Feyc8O8nz_oyjImYcKQ6U2oM'
 
 export const REGISTER_USER = 'REGISTER_USER'

@@ -9,65 +9,7 @@ import SelectField from 'material-ui/SelectField'
 import AlertDialog from './AlertDialog'
 import Button from '../components/Button'
 import '../styles/ContactForm.css'
-
-const team = () => (
-  <div className="team" style={{ marginTop: '60px' }}>
-    <div className="contact-two-containers" style={{ textAlign: 'left' }}>
-      <div className="contact-container">
-        <div>
-          <img
-            src={require('../assets/eric_profile.jpg')}
-            alt="Eric Profile"
-            width="250"
-            height="250"
-          />
-        </div>
-        <div>
-          <p>
-            {' '}
-            Eric Holmström <br /> <i className="material-icons">phone</i>{' '}
-            <a style={{ color: '#000000' }} href="tel:+46768654806">
-              {' '}
-              +46 768 65 48 06{' '}
-            </a>{' '}
-            <br />
-            <i className="material-icons">mail</i>
-            <a style={{ color: '#000000' }} href="mailto:eric@viksports.org">
-              {' '}
-              eric@viksports.org{' '}
-            </a>
-          </p>
-        </div>
-      </div>
-      <div className="contact-container">
-        <div>
-          <img
-            src={require('../assets/jakob_profile.jpg')}
-            alt="Jakob Profile"
-            width="250"
-            height="250"
-          />
-        </div>
-        <div>
-          <p>
-            {' '}
-            Jakob Mattsson <br /> <i className="material-icons">phone</i>{' '}
-            <a style={{ color: '#000000' }} href="tel:+46730456778">
-              {' '}
-              +46 730 45 67 78{' '}
-            </a>{' '}
-            <br />
-            <i className="material-icons">mail</i>
-            <a style={{ color: '#000000' }} href="mailto:jakob@viksports.org">
-              {' '}
-              jakob@viksports.org{' '}
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-)
+import * as API from '../constants'
 
 // eslint-disable-next-line
 class BookForm extends Component {
@@ -96,7 +38,7 @@ class BookForm extends Component {
       phoneNumber: this.state.phoneNumber,
     }
     console.log(payload)
-    const API_URL = 'https://lkry4buagb.execute-api.eu-west-1.amazonaws.com/default/sendEmail'
+    const API_URL = API.API_KEY_AWSLAMBDA
 
     fetch(API_URL, {
       method: 'POST',
@@ -120,6 +62,7 @@ class BookForm extends Component {
       phoneNumber: '',
     })
     e.preventDefault()
+    // this.setState({ message: 'Error! \nMessage was not sent. \n\nPlease fill in all fields.' })
   }
 
   render () {
@@ -159,7 +102,11 @@ class BookForm extends Component {
             onChange={(evt, val) => this.setChange('message', val)}
           />
         </div>
-        <Button title="Send" type="tertiary" onClick={this.handleSubmit} />
+        {this.state.name !== '' && this.state.email !== '' && this.state.message !== '' ? (
+          <Button title="Send" type="tertiary" onClick={this.handleSubmit} />
+        ) : (
+          <Button title="Send" type="disabled" />
+        )}
       </div>
     )
   }
