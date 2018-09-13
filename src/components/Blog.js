@@ -59,6 +59,14 @@ const blogpost4 = {
   author: <h3 style={styles.author}>Jakob Mattsson</h3>,
 }
 
+const blogpost5 = {
+  title: <h2 style={styles.h2}>Time for thesis work</h2>,
+  date: <h3 style={styles.h3}>September 13, 2018</h3>,
+  content:
+    'These last couple of weeks has been a period of transition from working on the project as a company to working on our thesis work. This requires us to change our mindset to a more academic thought process. Now the focus has to be more scientific with more emphasis on experiments and such. At the same time, both of us are enrolled in one course respectively, which so far has taken some time from our thesis work. However, we have progressed according to plan and so far no big failures. The start of our thesis work has also included a lot of paperwork to get it formally approved from all parties, and this has been considerably more strenous than either one of us expected; but it seems to be very close to final approval now.\n\n In the next week we hope to try our production process for a seamless wetsuit. Therefore focus this week has been to prepare for this try. We still have our hopes up for this method to work, even though it is not essential for the continuation of the project.',
+  author: <h3 style={styles.author}>Eric Holmström</h3>,
+}
+
 // eslint-disable-next-line
 class Blog extends React.Component {
   render () {
@@ -77,6 +85,11 @@ class Blog extends React.Component {
         </MediaQuery>
         <div className="blogWrapper">
           <h1>BLOG</h1>
+          {blogpost5.title}
+          {blogpost5.date}
+          <LongText content={blogpost5.content} limit={limit} />
+          {blogpost5.author}
+          <div className="blog-divider" />
           {blogpost4.title}
           {blogpost4.date}
           <LongText content={blogpost4.content} limit={limit} />
