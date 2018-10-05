@@ -67,6 +67,14 @@ const blogpost5 = {
   author: <h3 style={styles.author}>Eric Holmström</h3>,
 }
 
+const blogpost6 = {
+  title: <h2 style={styles.h2}>Things are moving</h2>,
+  date: <h3 style={styles.h3}>October 5, 2018</h3>,
+  content:
+    'You have to love doing things scientifically when you are an engineer. Instead of trail and error, we are dedicating this period of our master thesis to come up with theories and experimental designs to make our work as logical as possible. Sometimes it feels like the complete opposite of what we are doing as entrepreneurs.\n\nOn the other hand, the scientific world is so slooooooow.More the one month and we are finally in the lab building prototypes.The upcoming weeks will be full of laboratory test and simulations.\n\nLearning of the week: don’t go public transport if you’re picking up chemicals.If you saw two guys with one 25L pile each on the train this week it was probably us…',
+  author: <h3 style={styles.author}>Jakob Mattsson</h3>,
+}
+
 // eslint-disable-next-line
 class Blog extends React.Component {
   render () {
@@ -85,6 +93,11 @@ class Blog extends React.Component {
         </MediaQuery>
         <div className="blogWrapper">
           <h1>BLOG</h1>
+          {blogpost6.title}
+          {blogpost6.date}
+          <LongText content={blogpost6.content} limit={limit} />
+          {blogpost6.author}
+          <div className="blog-divider" />
           {blogpost5.title}
           {blogpost5.date}
           <LongText content={blogpost5.content} limit={limit} />
