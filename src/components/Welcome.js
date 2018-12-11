@@ -68,13 +68,8 @@ const renderLoggedOutMobile = () => (
 const renderFeatures = () => (
   <div className="boxWrapper" id="features">
     <div className="oneBox">
-      <img
-        src={require('../assets/hoddevik_runningsurfer.jpg')}
-        alt="surfer-bw"
-        width="300"
-        height="300"
-      />
-      <h2>Performance</h2>
+      <img src={require('../assets/icon_elastic.png')} alt="surfer-bw" width="300" height="261" />
+      <h2>Flexibility</h2>
       <div className="divider" />
       <p>
         We've deleveloped a way for increasing the flexibility allowing for easier movement for the
@@ -82,28 +77,22 @@ const renderFeatures = () => (
       </p>
     </div>
     <div className="oneBox">
-      <img
-        src={require('../assets/two_surfers_beach.jpg')}
-        alt="rubber-tree"
-        width="300"
-        height="300"
-      />
+      <img src={require('../assets/icon_plant.png')} alt="rubber-tree" width="300" height="261" />
       <h2>Sustainability</h2>
       <div className="divider" />
       <p>
         Wetsuits made from renewable materials. The rubber is harvested from natural rubber trees
-        called
-        <i>Hevea brasiliensis</i> instead of synthetic rubber. Other materials used are particularly
-        chosen to have as little impact on the environment as possible.
+        called <i>Hevea brasiliensis</i> instead of synthetic rubber. Other materials used are
+        particularly chosen to have as little impact on the environment as possible.
       </p>
     </div>
     <div className="oneBox">
-      <img src={require('../assets/porosity.jpg')} alt="porosity" width="300" height="300" />
-      <h2>Nanotechnology</h2>
+      <img src={require('../assets/icon_clock.png')} alt="porosity" width="300" height="261" />
+      <h2>Durability</h2>
       <div className="divider" />
       <p>
-        Introducing nanotechnology to watersports. New development in material research make it
-        possible to enhance insulation without increasing the thickness of the suit.
+        By using natural rubber and eliminating all seams, the durability of the wetsuit is
+        increased.
       </p>
     </div>
   </div>

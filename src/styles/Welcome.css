@@ -83,6 +83,10 @@
   text-align: center;
 }
 
+.oneBox h2 {
+  color: #000000;
+}
+
 .oneBoxMobile {
   width: 300px;
   margin: 0 0 40px 0;
