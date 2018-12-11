@@ -47,13 +47,17 @@
 }
 
 .home-text {
-  margin: 8% 0 15% 0;
+  margin: 10% 0 15% 0;
+  display: flex;
+  align-items: center;
 }
 .home-text p {
   font-size: 20px;
   color: white;
   letter-spacing: 2px;
   text-transform: uppercase;
+  width: 300px;
+  margin-left: 80px;
 }
 
 .buttonWrapper {
@@ -94,10 +98,15 @@
 
 @media (max-width: 768px) {
   .homeWrapper {
-    margin-top: 0;
+    margin-top: 20%;
   }
   .home-text img {
     margin-bottom: 20px;
+  }
+  .home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .home-text p {
     margin: 0;

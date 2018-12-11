@@ -76,15 +76,20 @@ class Header extends Component {
         this.props.location.pathname === '/blog' ? (
           <a href="/">
             <img
-              src={require('../assets/newheaderlogga_svart.png')}
-              width="55"
-              height="54"
+              src={require('../assets/viklogga_4_svart.png')}
+              width="65"
+              height="65"
               alt="logo"
             />
           </a>
         ) : (
           <a href="/">
-            <img src={require('../assets/newheaderlogga.png')} width="55" height="54" alt="logo" />
+            <img
+              src={require('../assets/viklogga_4_vit.png')}
+              width="65"
+              height="65"
+              alt="logo"
+            />
           </a>
         )}
         <MediaQuery minDeviceWidth={769}>{this.renderDesktopMenu()}</MediaQuery>

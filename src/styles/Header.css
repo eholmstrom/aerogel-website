@@ -18,7 +18,7 @@
 
 .Header a img {
   float: left;
-  margin: 10px -55px 0 10px;
+  margin: 5px -57px 0 10px;
 }
 
 .Header-button-menu {
@@ -48,6 +48,6 @@
 @media (max-width: 768px) {
   .Header a img {
     float: right;
-    margin: 10px 10px 0 0;
+    margin: 5px 5px 0 0;
   }
 }

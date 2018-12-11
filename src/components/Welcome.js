@@ -30,7 +30,7 @@ const style = {
 const renderLoggedOut = () => (
   <div className="homeWrapper">
     <div className="home-text">
-      <img src={require('../assets/newviklogga.png')} alt="logo" width="229" height="130" />
+      <img src={require('../assets/viklogga_4_vit.png')} alt="logo" width="180" height="180" />
       <p>Sustainability for enhanced performance</p>
     </div>
     <div className="buttonWrapper">
@@ -49,7 +49,7 @@ const renderLoggedOut = () => (
 const renderLoggedOutMobile = () => (
   <div className="homeWrapper">
     <div className="home-text">
-      <img src={require('../assets/newviklogga.png')} alt="logo" width="194" height="110" />
+      <img src={require('../assets/viklogga_4_vit.png')} alt="logo" width="120" height="120" />
       <p>Sustainability for enhanced performance</p>
     </div>
     <div className="buttonWrapper">
@@ -92,8 +92,9 @@ const renderFeatures = () => (
       <div className="divider" />
       <p>
         Wetsuits made from renewable materials. The rubber is harvested from natural rubber trees
-        called <i>Hevea brasiliensis</i> instead of synthetic rubber. Other materials used are
-        particularly chosen to have as little impact on the environment as possible.
+        called
+        <i>Hevea brasiliensis</i> instead of synthetic rubber. Other materials used are particularly
+        chosen to have as little impact on the environment as possible.
       </p>
     </div>
     <div className="oneBox">
@@ -136,6 +137,6 @@ class Welcome extends Component {
 }
 
 // <div className="featuresWrapper" id="features">
-// { ' ' }
+// { ' ' } 229 130 px
 
 export default Welcome

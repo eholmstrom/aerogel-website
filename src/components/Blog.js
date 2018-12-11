@@ -88,7 +88,7 @@ class Blog extends React.Component {
       >
         <MediaQuery minDeviceWidth={769}>
           <div className="sidePicture">
-            <img src={require('../assets/newviklogga.png')} alt="logo" width="229" height="130" />
+            <img src={require('../assets/viklogga_4_vit.png')} alt="logo" width="160" height="160" />
           </div>
         </MediaQuery>
         <div className="blogWrapper">
