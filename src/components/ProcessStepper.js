@@ -6,6 +6,8 @@ import Button from './Button'
 import TextMobileStepper from './GridListStepper'
 import SlideShow from './SlideShow'
 
+import '../styles/ProcessStepper.css'
+
 const titleColor = '#3a5b6c'
 
 const styleSlideShow = {
@@ -17,13 +19,15 @@ const styleSlideShow = {
 const step1 = {
   title: <h2 style={{ color: titleColor }}>CREATING A PROTOTYPE</h2>,
   content: (
-    <div>
+    <div className="contentWrapper">
       <p>
-        The first step in the work process is to create a prototype.<br />
+        The first step in the work process is to create a prototype.
+        <br />
         <br />
         This is an important step, determining if the product is easy to work with and if production
         is scaleable.
       </p>
+      <img src={require('../assets/research.jpg')} alt="surfer-bw" width="668" height="447" />
     </div>
   ),
 }
@@ -31,13 +35,14 @@ const step1 = {
 const step2 = {
   title: <h2 style={{ color: titleColor }}>MEASUREMENTS</h2>,
   content: (
-    <div>
+    <div className="contentWrapper">
       <p>
         Theoretically our material should add performance to the water sport user. To assure you
         about the quality of our product we need to do measurements regarding insulation, elasticity
         and durability. These measurements will give us quantitive information about our product's
         performance compared to current wetsuits.
       </p>
+      <img src={require('../assets/chart_insulation.png')} alt="surfer-bw" width="668" height="418" />
     </div>
   ),
 }
@@ -45,11 +50,12 @@ const step2 = {
 const step3 = {
   title: <h2 style={{ color: titleColor }}>LAUNCHING OUR WETSUIT</h2>,
   content: (
-    <div>
+    <div className="contentWrapper">
       <p>
         When the optimal structure has been determined together with functioning material
         performance we can begin the launch of our wetsuit.
       </p>
+      <img src={require('../assets/green_seaview.jpg')} alt="surfer-bw" width="668" height="445" />
     </div>
   ),
 }
@@ -199,7 +205,6 @@ class ProcessStepper extends React.Component {
           <MediaQuery minDeviceWidth={769}>
             <div style={{ minHeight: 250, padding: '0 16px' }}>
               {this.getStepContent(stepIndex)}
-              <SlideShow />
             </div>
           </MediaQuery>
 
@@ -211,6 +216,6 @@ class ProcessStepper extends React.Component {
     )
   }
 }
-// <MediaQuery minDeviceWidth={769}>{buttons}</MediaQuery>
+// <MediaQuery minDeviceWidth={769}>{buttons}</MediaQuery>, <SlideShow /> läggs in efter getStepContent(stepIndex)
 
 export default ProcessStepper

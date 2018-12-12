@@ -68,7 +68,7 @@ const renderLoggedOutMobile = () => (
 const renderFeatures = () => (
   <div className="boxWrapper" id="features">
     <div className="oneBox">
-      <img src={require('../assets/icon_elastic.png')} alt="surfer-bw" width="300" height="261" />
+      <img src={require('../assets/icon_elastic4.png')} alt="surfer-bw" width="300" height="261" />
       <h2>Flexibility</h2>
       <div className="divider" />
       <p>
@@ -77,7 +77,7 @@ const renderFeatures = () => (
       </p>
     </div>
     <div className="oneBox">
-      <img src={require('../assets/icon_plant2.png')} alt="rubber-tree" width="300" height="261" />
+      <img src={require('../assets/icon_plant3.png')} alt="rubber-tree" width="300" height="261" />
       <h2>Sustainability</h2>
       <div className="divider" />
       <p>
@@ -87,7 +87,7 @@ const renderFeatures = () => (
       </p>
     </div>
     <div className="oneBox">
-      <img src={require('../assets/icon_clock3.png')} alt="porosity" width="300" height="261" />
+      <img src={require('../assets/icon_clock4.png')} alt="porosity" width="300" height="261" />
       <h2>Durability</h2>
       <div className="divider" />
       <p>

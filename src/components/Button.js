@@ -14,7 +14,7 @@ const buttonStylePink = {
 const buttonStyleSecondary = {
   ...buttonStylePink,
   background: 'none',
-  color: '#77c9d4',
+  color: '#26965b', // '#77c9d4',
 }
 
 const buttonStyleDisable = {
@@ -29,7 +29,7 @@ const buttonStyleDisable = {
 const buttonStyleRounded = {
   ...buttonStylePink,
   fontWeight: 'none',
-  background: '#77c9d4', // Large button welcome page.
+  background: '#26965b', // '#77c9d4', // Large button welcome page.
 }
 
 const smallSize = {

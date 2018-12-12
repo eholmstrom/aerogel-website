@@ -1,0 +1,15 @@
+.contentWrapper {
+  position: relative;
+}
+
+.contentWrapper img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+@media (max-width: 768px) {
+  .contentWrapper img {
+    display: none;
+  }
+}

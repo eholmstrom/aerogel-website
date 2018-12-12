@@ -83,8 +83,9 @@
   text-align: center;
 }
 
+.oneBox p,
 .oneBox h2 {
-  color: #000000;
+  color: #000000; /* dark blue: #3a5b6c */
 }
 
 .oneBoxMobile {

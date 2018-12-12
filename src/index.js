@@ -14,7 +14,7 @@ const muiTheme = getMuiTheme({
   fontFamily: 'Lato, sans-serif',
   palette: {
     textColor: '#333',
-    primary1Color: '#77c9d4',
+    primary1Color: '#26965b', // '#77c9d4'
     primary2Color: '#3a5b6c',
   },
   appBar: {

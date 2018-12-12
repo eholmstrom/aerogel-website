@@ -21,7 +21,7 @@ const styles = {
   },
 
   mobileMenuItemActive: {
-    backgroundColor: '#77c9d4',
+    backgroundColor: '#26965b', // '#77c9d4',
   },
 
   menuButton: {
