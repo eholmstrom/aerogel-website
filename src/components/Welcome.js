@@ -77,7 +77,7 @@ const renderFeatures = () => (
       </p>
     </div>
     <div className="oneBox">
-      <img src={require('../assets/icon_plant.png')} alt="rubber-tree" width="300" height="261" />
+      <img src={require('../assets/icon_plant2.png')} alt="rubber-tree" width="300" height="261" />
       <h2>Sustainability</h2>
       <div className="divider" />
       <p>
@@ -87,12 +87,12 @@ const renderFeatures = () => (
       </p>
     </div>
     <div className="oneBox">
-      <img src={require('../assets/icon_clock.png')} alt="porosity" width="300" height="261" />
+      <img src={require('../assets/icon_clock3.png')} alt="porosity" width="300" height="261" />
       <h2>Durability</h2>
       <div className="divider" />
       <p>
         By using natural rubber and eliminating all seams, the durability of the wetsuit is
-        increased.
+        increased extending the lifespan of the product.
       </p>
     </div>
   </div>

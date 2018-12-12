@@ -6,6 +6,7 @@ import Button from './Button'
 import TextMobileStepper from './GridListStepper'
 import SlideShow from './SlideShow'
 import LongText from './LongText'
+import InstagramEmbed from 'react-instagram-embed'
 
 import '../styles/Blog.css'
 
@@ -88,7 +89,12 @@ class Blog extends React.Component {
       >
         <MediaQuery minDeviceWidth={769}>
           <div className="sidePicture">
-            <img src={require('../assets/viklogga_4_vit.png')} alt="logo" width="160" height="160" />
+            <img
+              src={require('../assets/viklogga_4_vit.png')}
+              alt="logo"
+              width="160"
+              height="160"
+            />
           </div>
         </MediaQuery>
         <div className="blogWrapper">
@@ -122,6 +128,20 @@ class Blog extends React.Component {
           {blogpost1.date}
           <LongText content={blogpost1.content} limit={limit} />
           {blogpost1.author}
+        </div>
+        <div className="instaWrapper">
+          <InstagramEmbed
+            url="https://www.instagram.com/p/BrSRqevH01y/"
+            maxWidth={320}
+            hideCaption={false}
+            containerTagName="div"
+            protocol=""
+            injectScript
+            onLoading={() => {}}
+            onSuccess={() => {}}
+            onAfterRender={() => {}}
+            onFailure={() => {}}
+          />
         </div>
       </div>
     )
