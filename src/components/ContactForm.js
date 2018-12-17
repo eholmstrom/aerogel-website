@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import ReactGA from 'react-ga'
 
 import TextField from 'material-ui/TextField'
 import MenuItem from 'material-ui/MenuItem'
@@ -31,6 +32,10 @@ class BookForm extends Component {
   }
 
   handleSubmit = (e) => {
+    ReactGA.event({
+      category: 'User',
+      action: 'Sent message via contact form.',
+    })
     const payload = {
       name: this.state.name,
       email: this.state.email,

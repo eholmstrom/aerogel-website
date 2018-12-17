@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import * as Scroll from 'react-scroll'
-import Button from '../components/Button'
 import Fade from 'react-reveal/Fade'
 import Responsive from 'react-responsive-decorator'
 import MediaQuery from 'react-responsive'
+import Button from '../components/Button'
 
 import '../styles/Welcome.css'
 

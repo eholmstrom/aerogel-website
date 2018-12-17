@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import ReactGA from 'react-ga'
 
 import Header from '../components/Header'
 import Welcome from '../components/Welcome'
@@ -22,8 +23,13 @@ export const paths = {
   contactUs: '/contactus',
 }
 
+function initializeReactGA () {
+  ReactGA.initialize('UA-131151176-1')
+}
+
 class App extends Component {
   componentWillMount () {
+    initializeReactGA()
     // TODO FIX
   }
 
@@ -48,6 +54,7 @@ class App extends Component {
                       accessToken={this.props.accessToken}
                       getUser={this.props.getUser}
                     />
+                    {ReactGA.pageview('/')}
                   </div>
                 )}
               />
@@ -62,6 +69,7 @@ class App extends Component {
                       logout={this.props.logout}
                     />
                     <WorkProcess />
+                    {ReactGA.pageview('/workprocess')}
                   </div>
                 )}
               />
@@ -76,6 +84,7 @@ class App extends Component {
                       logout={this.props.logout}
                     />
                     <ContactUs />
+                    {ReactGA.pageview('/contactus')}
                   </div>
                 )}
               />
@@ -90,6 +99,7 @@ class App extends Component {
                       logout={this.props.logout}
                     />
                     <AboutUsContainer />
+                    {ReactGA.pageview('/aboutus')}
                   </div>
                 )}
               />
@@ -104,6 +114,7 @@ class App extends Component {
                       logout={this.props.logout}
                     />
                     <BlogContainer />
+                    {ReactGA.pageview('/blog')}
                   </div>
                 )}
               />
