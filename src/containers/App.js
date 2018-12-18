@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import ReactGA from 'react-ga'
+import { Helmet } from 'react-helmet'
 
 import Header from '../components/Header'
 import Welcome from '../components/Welcome'
@@ -30,12 +31,24 @@ function initializeReactGA () {
 class App extends Component {
   componentWillMount () {
     initializeReactGA()
-    // TODO FIX
   }
 
   render () {
     return (
       <div className="App">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Vik Sports - Sustainable wetsuits with enhanced performance</title>
+          <meta
+            name="description"
+            content="Vik Sports offer sustainable wetsuits with enhanced performance. By reinventing the wetsuit we can offer a seamless wetsuit with higher flexibility, insulation performance but also durability compared to conventional wetsuits. All this with reduced environmental impact."
+          />
+          <meta
+            name="keywords"
+            content="sustainable, sustainability, wetsuit, wetsuits, wet suit, wet-suit, wet-suits, sustainable wetsuit, sustainable wetsuits, flexible, flexibility, flexible wetsuit, flexible wetsuits, natural, natural rubber, natural latex, natural rubber latex, natural wetsuit, natural wetsuits"
+          />
+          <meta name="robots" content="index, follow" />
+        </Helmet>
         <BrowserRouter>
           <div style={{ height: '100%' }}>
             <Switch>
