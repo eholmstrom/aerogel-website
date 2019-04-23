@@ -1,0 +1,48 @@
+
+.vikfix {
+  min-height: calc(100vh - 80px);
+}
+
+.vikfix-wrapper {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+}
+
+.vikfix-text {
+  width: 60%;
+  margin-top: 4%;
+  position: relative;
+}
+.paragraph-pic-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paragraph-pic-box p {
+    width: 45%;
+}
+
+.vikfix-buttonWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 31.6%;
+}
+
+@media (max-width: 768px) {
+  .vikfix-text {
+      width: 90%;
+      text-align: center;
+  }
+  .vikfix-buttonWrapper {
+      position: unset;
+      padding: 20px 0;
+  }
+  .paragraph-pic-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .paragraph-pic-box p {
+    width: 90%;
+}
+}

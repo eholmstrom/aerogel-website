@@ -25,7 +25,9 @@ class Header extends Component {
     <div>
       {this.props.location.pathname === '/workprocess' ||
       this.props.location.pathname === '/contactus' ||
-      this.props.location.pathname === '/blog' ? (
+      this.props.location.pathname === '/blog' ||
+      this.props.location.pathname === '/instructions' ||
+      this.props.location.pathname === '/vikfix' ? (
         <FlatButton
           style={{ marginTop: 20, color: 'black' }}
           icon={<Menu />}
@@ -50,8 +52,8 @@ class Header extends Component {
     <div className="Header-menu">
       <MenuLinkItem title="Home" path={paths.home} activePath={this.props.location.pathname} />
       <MenuLinkItem
-        path={paths.workProcess}
-        title="Work Process"
+        path={paths.vikfix}
+        title="vikfix"
         activePath={this.props.location.pathname}
       />
       <MenuLinkItem
@@ -73,7 +75,9 @@ class Header extends Component {
       <div className="Header">
         {this.props.location.pathname === '/workprocess' ||
         this.props.location.pathname === '/contactus' ||
-        this.props.location.pathname === '/blog' ? (
+        this.props.location.pathname === '/blog' ||
+        this.props.location.pathname === '/instructions' ||
+        this.props.location.pathname === '/vikfix' ? (
           <a href="/">
             <img
               src={require('../assets/viklogga_4_svart.png')}

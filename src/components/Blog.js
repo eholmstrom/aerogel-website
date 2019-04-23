@@ -72,8 +72,20 @@ const blogpost6 = {
   title: <h2 style={styles.h2}>Things are moving</h2>,
   date: <h3 style={styles.h3}>October 5, 2018</h3>,
   content:
-    'You have to love doing things scientifically when you are an engineer. Instead of trail and error, we are dedicating this period of our master thesis to come up with theories and experimental designs to make our work as logical as possible. Sometimes it feels like the complete opposite of what we are doing as entrepreneurs.\n\nOn the other hand, the scientific world is so slooooooow. More than one month have passed and we are finally in the lab building prototypes. The upcoming weeks will be full of laboratory tests and simulations.\n\nLearning of the week: don’t go public transport if you’re picking up chemicals. If you saw two guys with one 25L bucket each on the train this week it was probably us…',
+    'You have to love doing things scientifically when you are an engineer. Instead of trial and error, we are dedicating this period of our master thesis to come up with theories and experimental designs to make our work as logical as possible. Sometimes it feels like the complete opposite of what we are doing as entrepreneurs.\n\nOn the other hand, the scientific world is so slooooooow. More than one month has passed and we are finally in the lab building prototypes. The upcoming weeks will be full of laboratory tests and simulations.\n\nLearning of the week: don’t go public transport if you’re picking up chemicals. If you saw two guys with one 25L bucket each on the train this week it was probably us…',
   author: <h3 style={styles.author}>Jakob Mattsson</h3>,
+}
+
+const blogpost7 = {
+  title: (
+    <h2 style={styles.h2}>
+      The end of the beginning
+    </h2>
+  ),
+  date: <h3 style={styles.h3}>January 17, 2019</h3>,
+  content:
+    'It’s been a while. For the last months we have been working on our thesis. Tomorrow is the D-Day; the presentation. Our six months long thesis work at the Industrial Production facility at Lund University has come to an end. But our wetsuit project won’t end here. We have decided to continue working with our project. After the presentation, Jakob will be a full-fledged engineer, while I have half a semester of courses before I can title myself as one.\n\nTime flies. Jakob and I met the first day of the university, at the orientation. He was probably wearing sandals and a backpack, whereas I was properly dressed. JK, but he was the happiest camper there. We became good friends in the blink of an eye. During these five years we have known each other, Jakob has been full of ideas, both good and bad (mostly bad). I have been his filter and the idea that finally caught my eye was the wetsuit idea. I’m glad we realized it.\n\nThis is the start of something great!',
+  author: <h3 style={styles.author}>Eric Holmström</h3>,
 }
 
 // eslint-disable-next-line
@@ -99,6 +111,11 @@ class Blog extends React.Component {
         </MediaQuery>
         <div className="blogWrapper">
           <h1>BLOG</h1>
+          {blogpost7.title}
+          {blogpost7.date}
+          <LongText content={blogpost7.content} limit={limit} />
+          {blogpost7.author}
+          <div className="blog-divider" />
           {blogpost6.title}
           {blogpost6.date}
           <LongText content={blogpost6.content} limit={limit} />
@@ -131,7 +148,7 @@ class Blog extends React.Component {
         </div>
         <div className="instaWrapper">
           <InstagramEmbed
-            url="https://www.instagram.com/p/BrSRqevH01y/"
+            url="https://www.instagram.com/p/BrhmEK0A3AW/"
             maxWidth={320}
             hideCaption={false}
             containerTagName="div"

@@ -12,6 +12,8 @@ import WorkProcess from './WorkProcess'
 import ContactUs from './ContactUs'
 import AboutUsContainer from './AboutUsContainer'
 import BlogContainer from './BlogContainer'
+import InstructionContainer from './InstructionContainer'
+import VikfixContainer from './VikfixContainer'
 
 import '../styles/App.css'
 
@@ -22,6 +24,8 @@ export const paths = {
   aboutUs: '/aboutus',
   blog: '/blog',
   contactUs: '/contactus',
+  instructions: '/instructions',
+  vikfix: '/vikfix',
 }
 
 function initializeReactGA () {
@@ -128,6 +132,36 @@ class App extends Component {
                     />
                     <BlogContainer />
                     {ReactGA.pageview('/blog')}
+                  </div>
+                )}
+              />
+              <Route
+                exact
+                path="/instructions"
+                render={() => (
+                  <div className="instructions">
+                    <Header
+                      loggedIn={!!this.props.accessToken}
+                      admin={this.props.user}
+                      logout={this.props.logout}
+                    />
+                    <InstructionContainer />
+                    {ReactGA.pageview('/instructions')}
+                  </div>
+                )}
+              />
+              <Route
+                exact
+                path="/vikfix"
+                render={() => (
+                  <div className="vikfix">
+                    <Header
+                      loggedIn={!!this.props.accessToken}
+                      admin={this.props.user}
+                      logout={this.props.logout}
+                    />
+                    <VikfixContainer />
+                    {ReactGA.pageview('/vikfix')}
                   </div>
                 )}
               />

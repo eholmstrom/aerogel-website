@@ -61,8 +61,8 @@ const MobileDrawer = props => (
       onClick={props.handleDrawerToggle}
     />
     <MobileMenuItem
-      title="Work Process"
-      path={paths.workProcess}
+      title="vikfix"
+      path={paths.vikfix}
       activePath={props.location.pathname}
       onClick={props.handleDrawerToggle}
     />
