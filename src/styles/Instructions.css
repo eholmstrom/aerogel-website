@@ -1,0 +1,10 @@
+.contact-wrapper {
+  padding: 20px;
+  text-align: center;
+}
+
+.instructionWrapper {
+    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
