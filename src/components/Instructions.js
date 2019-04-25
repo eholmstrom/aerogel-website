@@ -8,60 +8,65 @@ import MenuItem from 'material-ui/MenuItem'
 import SelectField from 'material-ui/SelectField'
 
 import AlertDialog from './AlertDialog'
-import '../styles/Instructions.css'
 import * as API from '../constants'
 import MediaQuery from 'react-responsive'
 import { Step, Stepper, StepButton, StepContent } from 'material-ui/Stepper'
 import Button from './Button'
 import TextMobileStepper from './GridListStepper'
 
-import '../styles/ProcessStepper.css'
+import '../styles/Instructions.css'
+
 
 const titleColor = '#3a5b6c'
 
 const step1 = {
-  title: <h2 style={{ color: titleColor }}>CREATING A PROTOTYPE</h2>,
   content: (
     <div className="contentWrapper">
-      <p>
-        The first step in the work process is to create a prototype.
-        <br />
-        <br />
-        This is an important step, determining if the product is easy to work with and if production
-        is scaleable.
-      </p>
-      <img src={require('../assets/research.jpg')} alt="surfer-bw" width="668" height="447" />
+      <img src={require('../assets/Instructions_website_1.png')} alt="surfer-bw" width="200" height="290" />
     </div>
   ),
 }
 
 const step2 = {
-  title: <h2 style={{ color: titleColor }}>MEASUREMENTS</h2>,
   content: (
     <div className="contentWrapper">
-      <p>
-        Theoretically our material should add performance to the water sport user. To assure you
-        about the quality of our product we need to do measurements regarding insulation, elasticity
-        and durability. These measurements will give us quantitive information about our product's
-        performance compared to current wetsuits.
-      </p>
-      <img src={require('../assets/chart_insulation.png')} alt="surfer-bw" width="668" height="418" />
+      <img src={require('../assets/instructions_website_2.png')} alt="surfer-bw" width="200" height="290" />
     </div>
   ),
 }
 
 const step3 = {
-  title: <h2 style={{ color: titleColor }}>LAUNCHING OUR WETSUIT</h2>,
   content: (
     <div className="contentWrapper">
-      <p>
-        When the optimal structure has been determined together with functioning material
-        performance we can begin the launch of our wetsuit.
-      </p>
-      <img src={require('../assets/green_seaview.jpg')} alt="surfer-bw" width="668" height="445" />
+      <img src={require('../assets/instructions_website_3.png')} alt="surfer-bw" width="200" height="290" />
     </div>
   ),
 }
+
+const step4 = {
+  content: (
+    <div className="contentWrapper">
+      <img src={require('../assets/instructions_website_4.png')} alt="surfer-bw" width="200" height="290" />
+    </div>
+  ),
+}
+
+const step5 = {
+  content: (
+    <div className="contentWrapper">
+      <img src={require('../assets/instructions_website_5.png')} alt="surfer-bw" width="200" height="290" />
+    </div>
+  ),
+}
+
+const step6 = {
+  content: (
+    <div className="contentWrapper">
+      <img src={require('../assets/instructions_website_6.png')} alt="surfer-bw" width="200" height="290" />
+    </div>
+  ),
+}
+
 
 const buttonWrapperStyle = {
   position: 'fixed',
@@ -99,7 +104,7 @@ const ResponsiveStepContent = ({ children, ...rest }) => (
  // eslint-disable-next-line
 class Instructions extends Component {
     static disabledPrimaryButtonCheck (stepIndex) {
-    if (stepIndex === 2) {
+    if (stepIndex === 5) {
       return 'disabled'
     }
     return 'tertiary'
@@ -124,6 +129,12 @@ class Instructions extends Component {
         return this.renderView(step2)
       case 2:
         return this.renderView(step3)
+      case 3:
+        return this.renderView(step4)
+      case 4:
+        return this.renderView(step5)
+      case 5:
+        return this.renderView(step6)
       default:
         return 'wehejnej'
     }
@@ -138,7 +149,7 @@ class Instructions extends Component {
 
   handleNext = () => {
     const { stepIndex } = this.state
-    if (stepIndex < 2) {
+    if (stepIndex < 5) {
       this.setState({ stepIndex: stepIndex + 1 })
     }
   }
@@ -153,20 +164,85 @@ class Instructions extends Component {
  
 
   render () {
+    const { stepIndex } = this.state
+    const buttons = [
+      <Button
+        key="btn-1"
+        title="Back"
+        type={Instructions.disabledSecondaryButtonCheck(stepIndex)}
+        onClick={this.handlePrev}
+        style={{ marginRight: 12 }}
+      />,
+      <Button
+        key="btn-2"
+        title="Continue"
+        type={Instructions.disabledPrimaryButtonCheck(stepIndex)}
+        onClick={this.handleNext}
+      />,
+    ]
     return (
       <div className="contact-wrapper">
-        <h1> Instructions for applying <br/></h1>
-        <h1 style={{ textTransform: 'lowercase', color: 'black'}}> vikfix </h1>
-        <div className="instructionWrapper">
-            <img src={require('../assets/Instructions_website_1.png')} alt="product" width="200" height="290" />
-            <img src={require('../assets/instructions_website_2.png')} alt="product" width="200" height="290" />
-            <img src={require('../assets/instructions_website_3.png')} alt="product" width="200" height="290" />
-        </div>
-        <div className="instructionWrapper">
-            <img src={require('../assets/instructions_website_4.png')} alt="product" width="200" height="290" />
-            <img src={require('../assets/instructions_website_5.png')} alt="product" width="200" height="290" />
-            <img src={require('../assets/instructions_website_6.png')} alt="product" width="200" height="290" />
-        </div>
+        <MediaQuery minDeviceWidth={769}>
+            <h1> Instructions for applying <br/></h1>
+            <h1 style={{ textTransform: 'lowercase', color: 'black'}}> vikfix </h1>
+            <div className="instructionWrapper">
+                <img src={require('../assets/Instructions_website_1.png')} alt="product" width="200" height="290" />
+                <img src={require('../assets/instructions_website_2.png')} alt="product" width="200" height="290" />
+                <img src={require('../assets/instructions_website_3.png')} alt="product" width="200" height="290" />
+            </div>
+            <div className="instructionWrapper">
+                <img src={require('../assets/instructions_website_4.png')} alt="product" width="200" height="290" />
+                <img src={require('../assets/instructions_website_5.png')} alt="product" width="200" height="290" />
+                <img src={require('../assets/instructions_website_6.png')} alt="product" width="200" height="290" />
+            </div>
+        </MediaQuery>
+        <MediaQuery maxDeviceWidth={769}>
+            <div
+            style={{
+          width: '100%',
+          maxWidth: 700,
+          margin: '0 auto 0 auto',
+        }}
+        >
+                <ResponsiveStepper linear={false} activeStep={stepIndex}>
+                <Step>
+                    <StepButton onClick={() => this.setState({ stepIndex: 0 })}>
+                        Prepare the damaged area
+                    </StepButton>
+                    <ResponsiveStepContent>{this.getStepContent(0)}</ResponsiveStepContent>
+                </Step>
+                <Step>
+                    <StepButton onClick={() => this.setState({ stepIndex: 1 })}>Sand the damaged area</StepButton>
+                    <ResponsiveStepContent>{this.getStepContent(1)}</ResponsiveStepContent>
+                </Step>
+                <Step>
+                    <StepButton onClick={() => this.setState({ stepIndex: 2 })}>
+                    Apply the binding resin
+                    </StepButton>
+                    <ResponsiveStepContent>{this.getStepContent(2)}</ResponsiveStepContent>
+                </Step>
+                <Step>
+                    <StepButton onClick={() => this.setState({ stepIndex: 3 })}>
+                    Apply the main resin
+                    </StepButton>
+                    <ResponsiveStepContent>{this.getStepContent(3)}</ResponsiveStepContent>
+                </Step>
+                <Step>
+                    <StepButton onClick={() => this.setState({ stepIndex: 4 })}>
+                    Heat up and form main resin
+                    </StepButton>
+                    <ResponsiveStepContent>{this.getStepContent(4)}</ResponsiveStepContent>
+                </Step>
+                <Step>
+                    <StepButton onClick={() => this.setState({ stepIndex: 5 })}>
+                    Finilize the structure
+                    </StepButton>
+                    <ResponsiveStepContent>{this.getStepContent(5)}</ResponsiveStepContent>
+                </Step>
+                </ResponsiveStepper>
+              </div>
+            <div style={buttonWrapperStyle}>{buttons}</div>
+        </MediaQuery>
       </div>
     )
   }
