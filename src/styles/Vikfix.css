@@ -1,4 +1,3 @@
-
 .vikfix {
   min-height: calc(100vh - 80px);
 }
@@ -20,23 +19,23 @@
 }
 
 .paragraph-pic-box p {
-    width: 45%;
+  width: 45%;
 }
 
 .vikfix-buttonWrapper {
-  position: absolute;
+  /*position: absolute;
   bottom: 0;
-  left: 31.6%;
+  left: 31.6%;*/
 }
 
 @media (max-width: 768px) {
   .vikfix-text {
-      width: 90%;
-      text-align: center;
+    width: 90%;
+    text-align: center;
   }
   .vikfix-buttonWrapper {
-      position: unset;
-      padding: 20px 0;
+    position: unset;
+    padding: 20px 0;
   }
   .paragraph-pic-box {
     flex-direction: column;
@@ -44,5 +43,5 @@
   }
   .paragraph-pic-box p {
     width: 90%;
-}
+  }
 }

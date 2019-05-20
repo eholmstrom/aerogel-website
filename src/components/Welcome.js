@@ -68,31 +68,39 @@ const renderLoggedOutMobile = () => (
 const renderFeatures = () => (
   <div className="boxWrapper" id="features">
     <div className="oneBox">
-      <img src={require('../assets/icon_elastic4.png')} alt="surfer-bw" width="300" height="261" />
-      <h2>Flexibility</h2>
+      <img
+        src={require('../assets/icon_simplicity.png')}
+        alt="surfer-bw"
+        width="230"
+        height="200"
+      />
+      <h2>Simplicity</h2>
       <div className="divider" />
       <p>
-        We've deleveloped a way for increasing the flexibility allowing for easier movement for the
-        wearer while improving the insulation properties keeping you warm during long sessions.{' '}
+        {' '}
+        Watersport products that are easy to use and apply. We develop our products for you to spend
+        more time in the water than on land.
       </p>
     </div>
     <div className="oneBox">
-      <img src={require('../assets/icon_plant3.png')} alt="rubber-tree" width="300" height="261" />
+      <img src={require('../assets/icon_plant3.png')} alt="rubber-tree" width="230" height="200" />
       <h2>Sustainability</h2>
       <div className="divider" />
       <p>
-        Wetsuits made from renewable materials. The rubber is harvested from natural rubber trees
-        called <i>Hevea brasiliensis</i> instead of synthetic rubber. Other materials used are
-        particularly chosen to have as little impact on the environment as possible.
+        {' '}
+        Products that are non-toxic and environmentally friendly. The material used is based on
+        renewable resources that can be harvested continuously from our growing forests. And we can
+        proudly say: no petroleum sources are used.
       </p>
     </div>
     <div className="oneBox">
-      <img src={require('../assets/icon_clock4.png')} alt="porosity" width="300" height="261" />
-      <h2>Durability</h2>
+      <img src={require('../assets/icon_running.png')} alt="porosity" width="230" height="200" />
+      <h2>Performance</h2>
       <div className="divider" />
       <p>
-        By using natural rubber and eliminating all seams, the durability of the wetsuit is
-        increased extending the lifespan of the product.
+        {' '}
+        No compensation on quality or performance. Sustainable products must be as good or better
+        than already existing alternatives.
       </p>
     </div>
   </div>

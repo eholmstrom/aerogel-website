@@ -1,0 +1,49 @@
+.modal {
+  font-size: 14px;
+  font-family: 'Anonymous Pro';
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 22px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 20px 5px;
+  /*margin: auto;*/
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.actions a {
+  color: white;
+  background-color: rgb(38, 150, 91);
+  font-size: 16px;
+  margin: 30px;
+  margin-left: 0;
+  padding: 12px;
+  min-width: 20vw;
+  border-radius: 5px;
+}

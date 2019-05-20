@@ -26,6 +26,7 @@ export const paths = {
   contactUs: '/contactus',
   instructions: '/instructions',
   vikfix: '/vikfix',
+  buy_vikfix: '/buy_vikfix',
 }
 
 function initializeReactGA () {
@@ -162,6 +163,21 @@ class App extends Component {
                     />
                     <VikfixContainer />
                     {ReactGA.pageview('/vikfix')}
+                  </div>
+                )}
+              />
+              <Route
+                exact
+                path="/buy_vikfix"
+                render={() => (
+                  <div className="buy_vikfix">
+                    <Header
+                      loggedIn={!!this.props.accessToken}
+                      admin={this.props.user}
+                      logout={this.props.logout}
+                    />
+                    <VikfixContainer />
+                    {ReactGA.pageview('/buy_vikfix')}
                   </div>
                 )}
               />

@@ -16,13 +16,17 @@ import TextMobileStepper from './GridListStepper'
 
 import '../styles/Instructions.css'
 
-
 const titleColor = '#3a5b6c'
 
 const step1 = {
   content: (
     <div className="contentWrapper">
-      <img src={require('../assets/Instructions_website_1.png')} alt="surfer-bw" width="200" height="290" />
+      <img
+        src={require('../assets/Instructions_website_1.png')}
+        alt="surfer-bw"
+        width="250"
+        height="298"
+      />
     </div>
   ),
 }
@@ -30,7 +34,12 @@ const step1 = {
 const step2 = {
   content: (
     <div className="contentWrapper">
-      <img src={require('../assets/instructions_website_2.png')} alt="surfer-bw" width="200" height="290" />
+      <img
+        src={require('../assets/instructions_website_2.png')}
+        alt="surfer-bw"
+        width="250"
+        height="262"
+      />
     </div>
   ),
 }
@@ -38,7 +47,12 @@ const step2 = {
 const step3 = {
   content: (
     <div className="contentWrapper">
-      <img src={require('../assets/instructions_website_3.png')} alt="surfer-bw" width="200" height="290" />
+      <img
+        src={require('../assets/instructions_website_3.png')}
+        alt="surfer-bw"
+        width="200"
+        height="310"
+      />
     </div>
   ),
 }
@@ -46,7 +60,12 @@ const step3 = {
 const step4 = {
   content: (
     <div className="contentWrapper">
-      <img src={require('../assets/instructions_website_4.png')} alt="surfer-bw" width="200" height="290" />
+      <img
+        src={require('../assets/instructions_website_4.png')}
+        alt="surfer-bw"
+        width="225"
+        height="334"
+      />
     </div>
   ),
 }
@@ -54,7 +73,12 @@ const step4 = {
 const step5 = {
   content: (
     <div className="contentWrapper">
-      <img src={require('../assets/instructions_website_5.png')} alt="surfer-bw" width="200" height="290" />
+      <img
+        src={require('../assets/instructions_website_5.png')}
+        alt="surfer-bw"
+        width="250"
+        height="307"
+      />
     </div>
   ),
 }
@@ -62,11 +86,15 @@ const step5 = {
 const step6 = {
   content: (
     <div className="contentWrapper">
-      <img src={require('../assets/instructions_website_6.png')} alt="surfer-bw" width="200" height="290" />
+      <img
+        src={require('../assets/instructions_website_6.png')}
+        alt="surfer-bw"
+        width="285"
+        height="241"
+      />
     </div>
   ),
 }
-
 
 const buttonWrapperStyle = {
   position: 'fixed',
@@ -101,9 +129,9 @@ const ResponsiveStepContent = ({ children, ...rest }) => (
   </MediaQuery>
 )
 
- // eslint-disable-next-line
+// eslint-disable-next-line
 class Instructions extends Component {
-    static disabledPrimaryButtonCheck (stepIndex) {
+  static disabledPrimaryButtonCheck (stepIndex) {
     if (stepIndex === 5) {
       return 'disabled'
     }
@@ -160,8 +188,6 @@ class Instructions extends Component {
       {step.content}
     </div>
   )
-  
- 
 
   render () {
     const { stepIndex } = this.state
@@ -183,65 +209,100 @@ class Instructions extends Component {
     return (
       <div className="contact-wrapper">
         <MediaQuery minDeviceWidth={769}>
-            <h1> Instructions for applying <br/></h1>
-            <h1 style={{ textTransform: 'lowercase', color: 'black'}}> vikfix </h1>
-            <div className="instructionWrapper">
-                <img src={require('../assets/Instructions_website_1.png')} alt="product" width="200" height="290" />
-                <img src={require('../assets/instructions_website_2.png')} alt="product" width="200" height="290" />
-                <img src={require('../assets/instructions_website_3.png')} alt="product" width="200" height="290" />
-            </div>
-            <div className="instructionWrapper">
-                <img src={require('../assets/instructions_website_4.png')} alt="product" width="200" height="290" />
-                <img src={require('../assets/instructions_website_5.png')} alt="product" width="200" height="290" />
-                <img src={require('../assets/instructions_website_6.png')} alt="product" width="200" height="290" />
-            </div>
+          <h1>
+            {' '}
+            Instructions for applying <br />
+          </h1>
+          <h1 style={{ textTransform: 'lowercase', color: 'black' }}> vikfix </h1>
+          <div className="instructionWrapper">
+            <img
+              src={require('../assets/Instructions_website_1.png')}
+              alt="product"
+              width="250"
+              height="298"
+            />
+            <img
+              src={require('../assets/instructions_website_2.png')}
+              alt="product"
+              width="250"
+              height="262"
+            />
+            <img
+              src={require('../assets/instructions_website_3.png')}
+              alt="product"
+              width="200"
+              height="310"
+            />
+          </div>
+          <div className="instructionWrapper">
+            <img
+              src={require('../assets/instructions_website_4.png')}
+              alt="product"
+              width="225"
+              height="334"
+            />
+            <img
+              src={require('../assets/instructions_website_5.png')}
+              alt="product"
+              width="250"
+              height="307"
+            />
+            <img
+              src={require('../assets/instructions_website_6.png')}
+              alt="product"
+              width="285"
+              height="241"
+            />
+          </div>
         </MediaQuery>
         <MediaQuery maxDeviceWidth={769}>
-            <div
+          <div
             style={{
-          width: '100%',
-          maxWidth: 700,
-          margin: '0 auto 0 auto',
-        }}
-        >
-                <ResponsiveStepper linear={false} activeStep={stepIndex}>
-                <Step>
-                    <StepButton onClick={() => this.setState({ stepIndex: 0 })}>
-                        Prepare the damaged area
-                    </StepButton>
-                    <ResponsiveStepContent>{this.getStepContent(0)}</ResponsiveStepContent>
-                </Step>
-                <Step>
-                    <StepButton onClick={() => this.setState({ stepIndex: 1 })}>Sand the damaged area</StepButton>
-                    <ResponsiveStepContent>{this.getStepContent(1)}</ResponsiveStepContent>
-                </Step>
-                <Step>
-                    <StepButton onClick={() => this.setState({ stepIndex: 2 })}>
-                    Apply the binding resin
-                    </StepButton>
-                    <ResponsiveStepContent>{this.getStepContent(2)}</ResponsiveStepContent>
-                </Step>
-                <Step>
-                    <StepButton onClick={() => this.setState({ stepIndex: 3 })}>
-                    Apply the main resin
-                    </StepButton>
-                    <ResponsiveStepContent>{this.getStepContent(3)}</ResponsiveStepContent>
-                </Step>
-                <Step>
-                    <StepButton onClick={() => this.setState({ stepIndex: 4 })}>
-                    Heat up and form main resin
-                    </StepButton>
-                    <ResponsiveStepContent>{this.getStepContent(4)}</ResponsiveStepContent>
-                </Step>
-                <Step>
-                    <StepButton onClick={() => this.setState({ stepIndex: 5 })}>
-                    Finilize the structure
-                    </StepButton>
-                    <ResponsiveStepContent>{this.getStepContent(5)}</ResponsiveStepContent>
-                </Step>
-                </ResponsiveStepper>
-              </div>
-            <div style={buttonWrapperStyle}>{buttons}</div>
+              width: '100%',
+              maxWidth: 700,
+              margin: '0 auto 0 auto',
+            }}
+          >
+            <ResponsiveStepper linear={false} activeStep={stepIndex}>
+              <Step>
+                <StepButton onClick={() => this.setState({ stepIndex: 0 })}>
+                  Prepare the damaged area
+                </StepButton>
+                <ResponsiveStepContent>{this.getStepContent(0)}</ResponsiveStepContent>
+              </Step>
+              <Step>
+                <StepButton onClick={() => this.setState({ stepIndex: 1 })}>
+                  Sand the damaged area
+                </StepButton>
+                <ResponsiveStepContent>{this.getStepContent(1)}</ResponsiveStepContent>
+              </Step>
+              <Step>
+                <StepButton onClick={() => this.setState({ stepIndex: 2 })}>
+                  Heat up the patch
+                </StepButton>
+                <ResponsiveStepContent>{this.getStepContent(2)}</ResponsiveStepContent>
+              </Step>
+              <Step>
+                <StepButton onClick={() => this.setState({ stepIndex: 3 })}>
+                  Attach the patch
+                </StepButton>
+                <ResponsiveStepContent>{this.getStepContent(3)}</ResponsiveStepContent>
+              </Step>
+              <Step>
+                <StepButton onClick={() => this.setState({ stepIndex: 4 })}>
+                  Adjust the patch
+                </StepButton>
+                <ResponsiveStepContent>{this.getStepContent(4)}</ResponsiveStepContent>
+              </Step>
+              <Step>
+                <StepButton onClick={() => this.setState({ stepIndex: 5 })}>
+                  Sand down the area
+                </StepButton>
+                <ResponsiveStepContent>{this.getStepContent(5)}</ResponsiveStepContent>
+              </Step>
+            </ResponsiveStepper>
+          </div>
+          <div style={buttonWrapperStyle}>{buttons}</div>
         </MediaQuery>
       </div>
     )

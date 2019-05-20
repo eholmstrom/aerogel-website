@@ -30,31 +30,28 @@ const projectSummary = () => (
         About you and <i>vik</i>
       </h3>
       <p>
-        Welcome to <i>vik</i> and the future of watersport wetsuits. We are dedicated to give you a
-        sustainable wetsuit with superior properties, you deserve it!
+        Welcome to <i>Vik Sports</i> and future of sustainable watersport products. We are dedicated
+        to offer you sustainable products with superior performance, you deserve it!
       </p>
       <h3>What are the problems today?</h3>
       <p>
-        Oil!! Wetsuits are generally made of neoprene which is a petroleum based product. Ironic
-        considering the connection we have to nature while being in the water. If we still want to
-        be a part of nature we must do our best to preserve it. Not only that. Wetsuits today suffer
-        from being stiff, thick and our overall performance is reduced.
+        Where should we start? Looking at both wetsuits and surfboards, the common source is
+        petroleum. Ironic considering our close connection to nature when practicing watersports!
+        The synthetic revolution has made us forget about natural materials that have been used for
+        thousands of years. There are possibilities to create incredible products with natural,
+        sustainable resources and we believe that is the way forward.
       </p>
       <h3>So?</h3>
       <p>
-        With inspiration from <i>Patagonia</i> and <i>Vissla</i> we have put focus on the
-        environment, however with a completely unique approach. Being sustainable should have impact
-        on nature, but also on you. We have put many hours in developing a completely new structure
-        that will totally change our way of thinking about wetsuits. Why should a green wetsuit
-        perform equally to traditional wetsuits? It should be BETTER! Rethinking materials, designs,
-        production has generated a sustainable wetsuit that will perform better in terms of
-        insulation and movement than the wetsuits on the market. Awesome right!? We want you to be{' '}
-        <i>aware</i> of the environment but not of your wetsuit.
+        We are on a mission trying to make it easier for you to choose products that are healthy for
+        you and for the environment. We believe it is important not to compromise on quality and
+        performance when choosing sustainable products.
       </p>
       <h3>And who are we?</h3>
       <p>
-        For now we are two people running <i>vik</i>, Jakob Mattsson and Eric Holmström. Background
-        in nanotechnology and a passion for surfing has been the seed for this idea to grow.
+        For now, we are two people running <i>Vik Sports</i>, Jakob Mattsson and Eric Holmström.
+        Background in nanotechnology and a passion for surfing has been the seed for this idea to
+        grow.
       </p>
     </p>
   </div>
