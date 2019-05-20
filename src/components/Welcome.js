@@ -57,7 +57,7 @@ const renderLoggedOutMobile = () => (
         <Button style={style.buttonStyleMobile} title="Learn More" type="tertiary" />
       </Link>
       <Scroll.Link activeClass="active" to="features" spy smooth offset={0} duration={700}>
-        <i className="material-icons" style={{ fontSize: '100px' }}>
+        <i className="material-icons" style={{ fontSize: '80px' }}>
           keyboard_arrow_down
         </i>
       </Scroll.Link>
@@ -118,7 +118,7 @@ class Welcome extends Component {
               <Fade delay={1000}>
                 {' '}
                 <div className="top-right">
-                  <p className="top-right-p">Reinventing wetsuits</p>
+                  <p className="top-right-p">Sustainable surf accessories</p>
                   <div className="divider-mini" />
                 </div>
               </Fade>

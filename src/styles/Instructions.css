@@ -4,11 +4,23 @@
 }
 
 .instructionWrapper {
-    padding: 40px;
-    display: flex;
-    justify-content: space-evenly;
+  padding: 40px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .contentWrapper {
   position: relative;
+}
+
+.videoWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.unitWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }

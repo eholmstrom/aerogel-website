@@ -3,16 +3,15 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import ReactGA from 'react-ga'
 
-import TextField from 'material-ui/TextField'
-import MenuItem from 'material-ui/MenuItem'
-import SelectField from 'material-ui/SelectField'
+import ReactPlayer from 'react-player'
+import { Step, Stepper, StepButton, StepContent } from 'material-ui/Stepper'
+import MediaQuery from 'react-responsive'
 
 import AlertDialog from './AlertDialog'
 import * as API from '../constants'
-import MediaQuery from 'react-responsive'
-import { Step, Stepper, StepButton, StepContent } from 'material-ui/Stepper'
 import Button from './Button'
 import TextMobileStepper from './GridListStepper'
+// import '../../node_modules/video-react/dist/video-react.css' // import css
 
 import '../styles/Instructions.css'
 
@@ -214,45 +213,66 @@ class Instructions extends Component {
             Instructions for applying <br />
           </h1>
           <h1 style={{ textTransform: 'lowercase', color: 'black' }}> vikfix </h1>
-          <div className="instructionWrapper">
-            <img
-              src={require('../assets/Instructions_website_1.png')}
-              alt="product"
-              width="250"
-              height="298"
-            />
-            <img
-              src={require('../assets/instructions_website_2.png')}
-              alt="product"
-              width="250"
-              height="262"
-            />
-            <img
-              src={require('../assets/instructions_website_3.png')}
-              alt="product"
-              width="200"
-              height="310"
-            />
+          <div className="videoWrapper">
+            <ReactPlayer url="https://youtu.be/1_bF9GIeCZc" controls />
           </div>
           <div className="instructionWrapper">
-            <img
-              src={require('../assets/instructions_website_4.png')}
-              alt="product"
-              width="225"
-              height="334"
-            />
-            <img
-              src={require('../assets/instructions_website_5.png')}
-              alt="product"
-              width="250"
-              height="307"
-            />
-            <img
-              src={require('../assets/instructions_website_6.png')}
-              alt="product"
-              width="285"
-              height="241"
-            />
+            <div className="unitWrapper">
+              <h2>1.</h2>
+              <img
+                src={require('../assets/Instructions_website_1.png')}
+                alt="product"
+                width="250"
+                height="298"
+              />
+            </div>
+            <div className="unitWrapper">
+              <h2>2.</h2>
+              <img
+                src={require('../assets/instructions_website_2.png')}
+                alt="product"
+                width="250"
+                height="262"
+              />
+            </div>
+            <div className="unitWrapper">
+              <h2>3.</h2>
+              <img
+                src={require('../assets/instructions_website_3.png')}
+                alt="product"
+                width="200"
+                height="310"
+              />
+            </div>
+          </div>
+          <div className="instructionWrapper">
+            <div className="unitWrapper">
+              <h2>4.</h2>
+              <img
+                src={require('../assets/instructions_website_4.png')}
+                alt="product"
+                width="225"
+                height="334"
+              />
+            </div>
+            <div className="unitWrapper">
+              <h2>5.</h2>
+              <img
+                src={require('../assets/instructions_website_5.png')}
+                alt="product"
+                width="250"
+                height="307"
+              />
+            </div>
+            <div className="unitWrapper">
+              <h2>6.</h2>
+              <img
+                src={require('../assets/instructions_website_6.png')}
+                alt="product"
+                width="285"
+                height="241"
+              />
+            </div>
           </div>
         </MediaQuery>
         <MediaQuery maxDeviceWidth={769}>
@@ -263,6 +283,9 @@ class Instructions extends Component {
               margin: '0 auto 0 auto',
             }}
           >
+            <div className="videoWrapper">
+              <ReactPlayer url="https://youtu.be/1_bF9GIeCZc" />
+            </div>
             <ResponsiveStepper linear={false} activeStep={stepIndex}>
               <Step>
                 <StepButton onClick={() => this.setState({ stepIndex: 0 })}>

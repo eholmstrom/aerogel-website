@@ -11,7 +11,7 @@ body,
 
 .welcome {
   min-height: calc(100vh - 80px);
-  background: url('../assets/hoddevik_seaview.jpg');
+  background: url('../assets/cold_water_surf_patched.jpg');
   background-size: cover;
   background-attachment: fixed;
 }

@@ -38,8 +38,8 @@ class AlertDialog extends React.Component {
   }
 
   handleClose = () => {
-    this.setState({ open: false })
     ReactGA.pageview('/buy_click')
+    this.setState({ open: false })
   }
 
   render () {
@@ -61,8 +61,8 @@ class AlertDialog extends React.Component {
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               We are glad that you are interested in our products. We are currently developing the
-              product to maximize its performance. However, we do have a first batch ready for you
-              to order at a 30/50%-discount.
+              product to maximize its performance. However, we have begun producing our first
+              batches for you to order at a 30/50%-discount.
               <br />
               <br />
               Please place an order with the form by clicking the button below.

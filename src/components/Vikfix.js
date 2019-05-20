@@ -13,7 +13,6 @@ import AlertDialog from './AlertDialog'
 import Button from '../components/Button'
 import '../styles/Vikfix.css'
 import * as API from '../constants'
-import Popup from './Popup'
 import DialogToForm from './DialogToForm'
 
 // eslint-disable-next-line
