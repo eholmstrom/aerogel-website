@@ -12,7 +12,7 @@ const style = {
   buttonStyle: {
     fontSize: 22,
     margin: 20,
-    padding: '25px 25px 25px 25px',
+    padding: '20px',
     minWidth: '20vw',
     borderRadius: 5,
     boxShadow: '2px 2px 60px rgba(0, 0, 0, 0.5)',
@@ -20,7 +20,7 @@ const style = {
   buttonStyleMobile: {
     fontSize: 16,
     margin: '20px 5px 5px 5px',
-    padding: '25px 25px 25px 25px',
+    padding: '20px',
     minWidth: '20vw',
     borderRadius: 5,
     boxShadow: '2px 2px 60px rgba(0, 0, 0, 0.5)',
@@ -30,7 +30,7 @@ const style = {
 const renderLoggedOut = () => (
   <div className="homeWrapper">
     <div className="home-text">
-      <img src={require('../assets/viklogga_4_vit.png')} alt="logo" width="180" height="180" />
+      <img src={require('../assets/viklogga_4_blue.png')} alt="logo" width="160" height="160" />
       <p>Sustainability for enhanced performance</p>
     </div>
     <div className="buttonWrapper">
@@ -114,16 +114,7 @@ class Welcome extends Component {
       <div>
         <Fade>
           <div className="Welcome">
-            <MediaQuery minDeviceWidth={769}>
-              <Fade delay={1000}>
-                {' '}
-                <div className="top-right">
-                  <p className="top-right-p">Sustainable surf accessories</p>
-                  <div className="divider-mini" />
-                </div>
-              </Fade>
-              {renderLoggedOut()}
-            </MediaQuery>
+            <MediaQuery minDeviceWidth={769}>{renderLoggedOut()}</MediaQuery>
             <MediaQuery maxDeviceWidth={768}>{renderLoggedOutMobile()}</MediaQuery>
           </div>
         </Fade>
@@ -135,5 +126,13 @@ class Welcome extends Component {
 
 // <div className="featuresWrapper" id="features">
 // { ' ' } 229 130 px
+
+/*               <Fade delay={1000}>
+{ ' ' }
+<div className="top-right">
+  <p className="top-right-p">Sustainable surf accessories</p>
+  <div className="divider-mini" />
+</div>
+              </Fade > */
 
 export default Welcome

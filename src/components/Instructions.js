@@ -214,7 +214,7 @@ class Instructions extends Component {
           </h1>
           <h1 style={{ textTransform: 'lowercase', color: 'black' }}> vikfix </h1>
           <div className="videoWrapper">
-            <ReactPlayer url="https://youtu.be/1_bF9GIeCZc" controls />
+            <ReactPlayer url="https://www.youtube.com/watch?v=p-EYscbUp_s&feature=youtu.be" controls />
           </div>
           <div className="instructionWrapper">
             <div className="unitWrapper">
@@ -284,7 +284,7 @@ class Instructions extends Component {
             }}
           >
             <div className="videoWrapper">
-              <ReactPlayer url="https://youtu.be/1_bF9GIeCZc" />
+              <ReactPlayer url="https://www.youtube.com/watch?v=p-EYscbUp_s&feature=youtu.be" controls />
             </div>
             <ResponsiveStepper linear={false} activeStep={stepIndex}>
               <Step>

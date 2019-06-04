@@ -1,19 +1,19 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
-import Button2 from '../components/Button'
 import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import ReactGA from 'react-ga'
+import Button2 from '../components/Button'
 
 const style = {
   buttonStyle: {
     fontSize: 22,
     margin: 20,
     marginLeft: 0,
-    padding: '25px 25px 25px 25px',
+    padding: '20px',
     minWidth: '20vw',
     borderRadius: 5,
     // boxShadow: '2px 2px 60px rgba(0, 0, 0, 0.5)',
@@ -34,11 +34,12 @@ class AlertDialog extends React.Component {
   }
 
   handleClickOpen = () => {
+    ReactGA.pageview('/buynow_click')
     this.setState({ open: true })
   }
 
   handleClose = () => {
-    ReactGA.pageview('/buy_click')
+    ReactGA.pageview('/placeorder_click')
     this.setState({ open: false })
   }
 
@@ -77,7 +78,7 @@ class AlertDialog extends React.Component {
                   padding: '15px',
                   backgroundColor: 'rgb(38, 150, 91)',
                 }}
-                href="https://docs.google.com/forms/d/1Shf8DZ1eD0Smzl3Fk0GfOINVUm7t_lj4wrIdBcRlmTg/prefill"
+                href="https://forms.gle/mcxFSrTYr1t4FQkT7"
               >
                 Place an order
               </a>

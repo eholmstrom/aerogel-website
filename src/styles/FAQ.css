@@ -1,0 +1,14 @@
+.FAQ-wrapper {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+}
+.FAQ-main {
+  width: 60%;
+  margin-top: 4%;
+  position: relative;
+}
+
+.questions-vikfix {
+  padding: 0 20px 20px 20px;
+}

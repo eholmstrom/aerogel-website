@@ -6,7 +6,7 @@
 }
 
 .main-div-aboutUs {
-  background: url('../assets/wave-surfing_edited.jpg');
+  background: url('../assets/cold_water_surf_patched.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -55,5 +55,7 @@
   }
   .main-div {
     background-image: none;
+    min-height: unset;
+    height: 0;
   }
 }

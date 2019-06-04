@@ -14,6 +14,7 @@ import AboutUsContainer from './AboutUsContainer'
 import BlogContainer from './BlogContainer'
 import InstructionContainer from './InstructionContainer'
 import VikfixContainer from './VikfixContainer'
+import FAQContainer from './FAQContainer'
 
 import '../styles/App.css'
 
@@ -27,6 +28,7 @@ export const paths = {
   instructions: '/instructions',
   vikfix: '/vikfix',
   buy_vikfix: '/buy_vikfix',
+  faq: '/vikfix/FAQ',
 }
 
 function initializeReactGA () {
@@ -178,6 +180,21 @@ class App extends Component {
                     />
                     <VikfixContainer />
                     {ReactGA.pageview('/buy_vikfix')}
+                  </div>
+                )}
+              />
+              <Route
+                exact
+                path="/vikfix/FAQ"
+                render={() => (
+                  <div className="FAQ">
+                    <Header
+                      loggedIn={!!this.props.accessToken}
+                      admin={this.props.user}
+                      logout={this.props.logout}
+                    />
+                    <FAQContainer />
+                    {ReactGA.pageview('/vikfix/FAQ')}
                   </div>
                 )}
               />

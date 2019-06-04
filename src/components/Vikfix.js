@@ -21,7 +21,7 @@ const style = {
     fontSize: 22,
     margin: 20,
     marginLeft: 0,
-    padding: '25px 25px 25px 25px',
+    padding: '20px',
     minWidth: '20vw',
     borderRadius: 5,
     // boxShadow: '2px 2px 60px rgba(0, 0, 0, 0.5)',
@@ -32,14 +32,7 @@ class BookForm extends Component {
   constructor (props) {
     super(props)
 
-    this.state = {
-      name: '',
-      email: '',
-      phoneNumber: '',
-      message: '',
-      sent: false,
-      error: false,
-    }
+    this.state = {}
   }
 
   render () {
@@ -67,6 +60,9 @@ class BookForm extends Component {
             <DialogToForm />
             <Link className="learn-more" to="/instructions">
               <Button style={style.buttonStyle} title="Instructions" type="secondary" />
+            </Link>
+            <Link className="learn-more" to="/vikfix/FAQ">
+              <Button style={style.buttonStyle} title="FAQ" type="secondary" />
             </Link>
           </div>
         </div>
