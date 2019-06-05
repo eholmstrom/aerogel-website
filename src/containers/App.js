@@ -45,14 +45,14 @@ class App extends Component {
       <div className="App">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Vik Sports - Sustainable wetsuits with enhanced performance</title>
+          <title>Vik Sports - Sustainable watersport products with enhanced performance</title>
           <meta
             name="description"
-            content="Vik Sports offer sustainable wetsuits with enhanced performance. By reinventing the wetsuit we can offer a seamless wetsuit with higher flexibility, insulation performance but also durability compared to conventional wetsuits. All this with reduced environmental impact."
+            content="Vik Sports offer watersport products that are easy to use and apply. We develop our products to be environmentally friendly and non-toxic. Without compensating on performance!"
           />
           <meta
             name="keywords"
-            content="sustainable, sustainability, wetsuit, wetsuits, wet suit, wet-suit, wet-suits, sustainable wetsuit, sustainable wetsuits, flexible, flexibility, flexible wetsuit, flexible wetsuits, natural, natural rubber, natural latex, natural rubber latex, natural wetsuit, natural wetsuits"
+            content="sustainable, sustainability, ding fix, ding, vikfix, vik, dingfix, ding-fix, wetsuit, wetsuits, wet suit, wet-suit, wet-suits, sustainable wetsuit, sustainable wetsuits, flexible, flexibility, flexible wetsuit, flexible wetsuits, natural, natural rubber, natural latex, natural rubber latex, natural wetsuit, natural wetsuits"
           />
           <meta name="robots" content="index, follow" />
         </Helmet>

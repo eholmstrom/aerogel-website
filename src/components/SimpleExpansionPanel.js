@@ -33,7 +33,7 @@ function SimpleExpansionPanel () {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
-            The vikfix work very well on polyester boards. Further testing must be done on epoxy
+            The vikfix works well on polyester boards. Further testing must be done on epoxy
             surfboards to ensure its adhesion.
           </Typography>
         </ExpansionPanelDetails>
